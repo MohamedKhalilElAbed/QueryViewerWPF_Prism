@@ -1,0 +1,5 @@
+QueryName|SC|IsStoredProcedure|ColumnsNames|Script
+FirstQuery|TestDynamic|0|Nome,Nombre|SELECT Name, nb FROM Users
+SecondQuery|SecondTestDynamic|0|Id,Product,Quantity,Total|SELECT * FROM Commandes
+ThirdQuery|SecondTestDynamic|1|Prod.,Tot.|computeInterestingProducts
+FourthQuery|TestDynamic|0||SELECT Name, nb FROM Users

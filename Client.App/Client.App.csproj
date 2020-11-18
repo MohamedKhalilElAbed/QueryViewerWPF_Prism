@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Client.Core\Client.Core.csproj" />
+    <ProjectReference Include="..\Client.Resources\Client.Resources.csproj" />
+    <ProjectReference Include="..\Client.Services\Client.Services.csproj" />
+    <ProjectReference Include="..\Client\Client.Module.csproj" />
+    <ProjectReference Include="..\Prism\src\Wpf\Prism.Unity.Wpf\Prism.Unity.Wpf.csproj" />
+    <ProjectReference Include="..\Prism\src\Wpf\Prism.Wpf\Prism.Wpf.csproj" />
+  </ItemGroup>
+
+
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)*.*&quot;  &quot;$(SolutionDir)\$(SolutionName)\bin\Debug\.netcorapp3.1\&quot; /Y" />
+  </Target>
+
+</Project>

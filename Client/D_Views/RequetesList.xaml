@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="Client.D_Views.RequetesList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:local="clr-namespace:Client.D_Views"
+      xmlns:prism="http://prismlibrary.com/" 
+      prism:ViewModelLocator.AutoWireViewModel="True"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800">
+    <b:Interaction.Triggers>
+        <b:EventTrigger EventName="Loaded">
+            <b:CallMethodAction TargetObject="{Binding}" MethodName="LoadRequetList"/>
+        </b:EventTrigger>
+    </b:Interaction.Triggers>
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Label Content="Requests List : "/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ListView x:Name="listViewRequetesDataBinding" ItemsSource="{Binding Requetes}" BorderThickness="0" Height = "auto" MaxHeight="800" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction 
+                                CommandParameter="{Binding ElementName=listViewRequetesDataBinding, Path=SelectedItem}"
+                                Command="{Binding OpenRequeteCommand}"
+                             />
+                            <!--"{Binding DataContext.OpenRequeteCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}"-->
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <ListView.ItemTemplate >
+                        <DataTemplate>
+                            <WrapPanel>
+                                <TextBlock Text="{Binding Name}" FontStyle="Italic">
+
+                                    <TextBlock.ToolTip>
+                                        <ToolTip  HorizontalOffset="20" >
+                                            <TextBlock Text="{Binding Description}"/>
+                                        </ToolTip>
+                                    </TextBlock.ToolTip>
+                                </TextBlock>
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</UserControl>

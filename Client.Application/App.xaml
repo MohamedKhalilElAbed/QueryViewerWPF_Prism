@@ -1,0 +1,12 @@
+﻿<Application x:Class="Client.Application.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Client.Application"
+             >
+    <Application.Resources>
+        <Image x:Key="CloseIcon" Source="pack://application:,,,/Client.Resources;component/E_Icons/x-close-icon-16.jpg"/>
+        <!-- UriSource="../Client.Resources/E_Icons/x-close-icon-16.jpg" />-->
+        <Image x:Key="RefreshIcon" Source="pack://application:,,,/Client.Resources;component/E_Icons/refresh-icon.png" />
+        <!--="../Client.Resources/E_Icons/refresh-icon.png"-->
+    </Application.Resources>
+</Application>

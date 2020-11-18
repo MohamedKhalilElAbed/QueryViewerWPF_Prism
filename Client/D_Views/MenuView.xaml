@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Client.Module.D_Views.MenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:custInter="clr-namespace:Interactivity;assembly=Client.Core"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:local="clr-namespace:Client.Module.D_Views"
+             xmlns:prism="http://prismlibrary.com/" 
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Display">
+                <MenuItem x:Name="paginationOption" Header="_Pagination" IsCheckable="True" IsChecked ="{Binding IsPaginationOptionOn, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Checked">
+                            <i:InvokeCommandAction  
+                                Command="{Binding PaginateMenuItemCheckedCommand}"
+                             />
+                        </i:EventTrigger>
+                        <i:EventTrigger EventName="Unchecked">
+                            <i:InvokeCommandAction  
+                                Command="{Binding PaginateMenuItemUncheckedCommand}"
+                             />
+                        </i:EventTrigger>
+                        <!--, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>-->
+                    </i:Interaction.Triggers>
+                    <!--IsChecked="{Binding IsPaginationOptionOn, Mode=TwoWay}"-->
+                    
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+</UserControl>

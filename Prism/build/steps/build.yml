@@ -1,0 +1,17 @@
+parameters:
+  solution: '**/*.sln'
+  solutionName: 'Solution'
+  msbuildArguments: '/p:JavaSdkDirectory="$(JAVA_HOME)"'
+
+steps:
+- template: prepare-build.yml
+  parameters:
+    solution: ${{ parameters.solution }}
+
+- task: MSBuild@1
+  displayName: Build ${{ parameters.solutionName }}
+  inputs:
+    solution: ${{ parameters.solution }}
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+    msbuildArguments: ${{ parameters.msbuildArguments }}

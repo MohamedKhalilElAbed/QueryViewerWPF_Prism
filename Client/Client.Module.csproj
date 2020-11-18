@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>Client.Module</AssemblyName>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ConfigFiles\**" />
+    <EmbeddedResource Remove="ConfigFiles\**" />
+    <None Remove="ConfigFiles\**" />
+    <Page Remove="ConfigFiles\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Expression.Blend.Sdk.WPF" Version="1.0.1" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.19" />  
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Client.Core\Client.Core.csproj" />
+    <ProjectReference Include="..\Client.DataModels\Client.DataModels.csproj" />
+    <ProjectReference Include="..\Client.Resources\Client.Resources.csproj" />
+    <ProjectReference Include="..\Client.Services\Client.Services.csproj" />
+    <ProjectReference Include="..\Prism\src\Wpf\Prism.Wpf\Prism.Wpf.csproj" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)*.*&quot;  &quot;$(SolutionDir)\$(SolutionName)\bin\Debug\.netcorapp3.1\&quot; /Y" />
+  </Target>
+
+</Project>

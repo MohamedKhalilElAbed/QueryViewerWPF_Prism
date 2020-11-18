@@ -1,0 +1,15 @@
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\bin\Debug\netcoreapp3.1\Client.Services.deps.json
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\bin\Debug\netcoreapp3.1\Client.Services.dll
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\bin\Debug\netcoreapp3.1\Client.Services.pdb
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\bin\Debug\netcoreapp3.1\Client.DataModels.dll
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\bin\Debug\netcoreapp3.1\Prism.dll
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\bin\Debug\netcoreapp3.1\Client.DataModels.pdb
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\bin\Debug\netcoreapp3.1\Prism.pdb
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\bin\Debug\netcoreapp3.1\Prism.xml
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\obj\Debug\netcoreapp3.1\Client.Services.csprojAssemblyReference.cache
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\obj\Debug\netcoreapp3.1\Client.Services.AssemblyInfoInputs.cache
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\obj\Debug\netcoreapp3.1\Client.Services.AssemblyInfo.cs
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\obj\Debug\netcoreapp3.1\Client.Services.csproj.CoreCompileInputs.cache
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\obj\Debug\netcoreapp3.1\Client.Services.csproj.CopyComplete
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\obj\Debug\netcoreapp3.1\Client.Services.dll
+C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Services\obj\Debug\netcoreapp3.1\Client.Services.pdb
