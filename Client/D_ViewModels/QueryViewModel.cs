@@ -23,21 +23,21 @@ using Prism.Events;
 using Client.Core.Events;
 using System.Windows.Controls;
 using System.ComponentModel;
+using TabControlRegion.Core;
 //using Unity;
 
 
 namespace Client.D_ViewModels
 {
-    public class QueryViewModel : BindableBase, INavigationAware
+    public class QueryViewModel : ViewModelBase
     {
         public Requete Request { get; set; }
         IEventAggregator _ea;
 
         private static int DefaultPageSize = 2;
 
-        protected override void OnPropertyChanged(PropertyChangedEventArgs args)
+        protected void OnPropertyChanged(object src, PropertyChangedEventArgs args)
         {
-            base.OnPropertyChanged(args);
             switch (args.PropertyName)
             {
                 case "PageCount":
@@ -55,12 +55,6 @@ namespace Client.D_ViewModels
                     break;
             }
 
-        }
-        private string _Title;
-        public string Title
-        {
-            get { return _Title; }
-            set { SetProperty(ref _Title, value); }
         }
         List<object[]> valuesCache;
 
@@ -174,7 +168,7 @@ namespace Client.D_ViewModels
             PageSizeTextBoxKeyDown += PageSizeTextBox_KeyDown;
             ExecutePreviousPage += Execute_PreviousPage;
             ExecuteNextPage += Execute_NextPage;
-
+            PropertyChanged += OnPropertyChanged;
 
             _DialogService = containerProvider.Resolve<IDialogService>();
             CurrentPage = 1;
@@ -280,14 +274,20 @@ namespace Client.D_ViewModels
         }
 
         public RelayCommand<KeyEventArgs> PageSizeTextBoxKeyDownCommand { get; private set; }
-        public event Action<bool> PageSizeTextBoxKeyDown = delegate { };
+        public event Action<bool, int> PageSizeTextBoxKeyDown = delegate { };
         void OnPageSizeTextBoxKeyDownRequested(KeyEventArgs args)
         {
-            PageSizeTextBoxKeyDown(true);
+            
+            if (args.Key != Key.Enter)
+                return;
+            int size;
+            if(int.TryParse((args.Source as TextBox).Text, out size))
+                PageSizeTextBoxKeyDown(true, size);
         }
 
-        private void PageSizeTextBox_KeyDown(bool modifyDefaultPageSize)
+        private void PageSizeTextBox_KeyDown(bool modifyDefaultPageSize , int size)
         {
+            PageSize = size;
             CurrentPage = 1;
             CurrentPage = 1;
             PageCount = ComputePageCount();
@@ -336,7 +336,7 @@ namespace Client.D_ViewModels
             {
                 IsPaginateOn = true;
                 PageSize = DefaultPageSize;
-                PageSizeTextBoxKeyDown(false);
+                PageSizeTextBoxKeyDown(false, PageSize);
             }
 
         }
@@ -470,19 +470,7 @@ namespace Client.D_ViewModels
             }
 
         }
-        public void OnNavigatedTo(NavigationContext navigationContext)
-        {
-
-        }
-
-        public bool IsNavigationTarget(NavigationContext navigationContext)
-        {
-            return false;
-        }
-
-        public void OnNavigatedFrom(NavigationContext navigationContext)
-        {
-        }
+        
 
         /*
 private void CurrentPage_PreviewTextInput(object sender, TextCompositionEventArgs e)

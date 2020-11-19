@@ -13,6 +13,7 @@ using System.Windows.Controls;
 using System.Windows;
 using System.Windows.Media;
 using System.Linq;
+using Prism.Commands;
 
 namespace Client.D_ViewModels
 {
@@ -23,12 +24,18 @@ namespace Client.D_ViewModels
 
         public ObservableCollection<QueryViewModel> Tabs { get; set; }
 
+        public DelegateCommand<string> NavigateCommand { get; set; }
         public ActionTabViewModel(IRegionManager regionManager)
         {
             _regionManager = regionManager;
+            NavigateCommand = new DelegateCommand<string>(Navigate);
             CloseTabCommand = new RelayCommand<MouseEventArgs>(OnCloseTabRequested);
             CloseTab += ActionTabViewModel_CloseTab;
             Tabs = new ObservableCollection<QueryViewModel>();
+        }
+        void Navigate(string navigationPath)
+        {
+            _regionManager.RequestNavigate("TabRegion", navigationPath);
         }
 
         private void ActionTabViewModel_CloseTab(MouseEventArgs obj)
