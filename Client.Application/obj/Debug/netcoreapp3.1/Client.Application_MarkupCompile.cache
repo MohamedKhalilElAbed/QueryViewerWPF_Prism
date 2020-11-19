@@ -8,13 +8,13 @@ C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\obj\Debug\n
 Client.Application
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\App.xaml
 11151548125
 
 41829509056
-2081643415970
+198486071171
 MainWindow.xaml;
 
-False
+True
 
