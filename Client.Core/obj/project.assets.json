@@ -576,11 +576,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Core\\Client.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Core\\Client.Core.csproj",
       "projectName": "Client.Core",
-      "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Core\\Client.Core.csproj",
+      "projectPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Core\\Client.Core.csproj",
       "packagesPath": "C:\\Users\\Khalil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Core\\obj\\",
+      "outputPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -600,11 +600,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Prism.Core\\Prism.Core.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Prism.Core\\Prism.Core.csproj"
+            "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Prism\\src\\Prism.Core\\Prism.Core.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Prism\\src\\Prism.Core\\Prism.Core.csproj"
             },
-            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Wpf\\Prism.Wpf\\Prism.Wpf.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Wpf\\Prism.Wpf\\Prism.Wpf.csproj"
+            "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Prism\\src\\Wpf\\Prism.Wpf\\Prism.Wpf.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Prism\\src\\Wpf\\Prism.Wpf\\Prism.Wpf.csproj"
             }
           }
         }

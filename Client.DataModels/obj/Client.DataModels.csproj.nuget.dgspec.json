@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj": {}
+    "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj": {
+    "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj",
+        "projectUniqueName": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj",
         "projectName": "Client.DataModels",
-        "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj",
+        "projectPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj",
         "packagesPath": "C:\\Users\\Khalil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.DataModels\\obj\\",
+        "outputPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.DataModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

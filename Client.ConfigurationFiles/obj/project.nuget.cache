@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+ktECBLoog82GRTS+ny3zc/32tSW1fOYPV5opJj7CF71R9S2P3F/bk9RLfvhAiqdGwZ7TmXLQuiAeQIbCAcZdQ==",
+  "dgSpecHash": "S1dkgJAoaWtB+8KFovtuTHZEUFka2p5+L6xYPooqOIF5xzIVT9sOIwJcfe7wyclw+jkAkYo7rgignDd3Be3CGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.ConfigurationFiles\\Client.ConfigurationFiles.csproj",
+  "projectFilePath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.ConfigurationFiles\\Client.ConfigurationFiles.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

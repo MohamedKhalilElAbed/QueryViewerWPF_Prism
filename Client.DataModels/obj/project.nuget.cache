@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B3XLK6gm4Ply9zY9lmHV6i8kEIHfveZuuKRnvOinb7l6WKgHLbAk1YV2+v34KnXkj+mFggbqXdq+ENFeQ4edFA==",
+  "dgSpecHash": "ORPxjXST6QroOQid5sTYBKbM72kcSVvd2231EWaP8OdMkAZsisRHAuN1+oBOGJEt1whXMHW9O86GMNfE2HBx+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj",
+  "projectFilePath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

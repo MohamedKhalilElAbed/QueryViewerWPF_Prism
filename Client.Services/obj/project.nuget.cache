@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P637kSxyzYBJVhrBTqBByLFZlrom1lJ3L1+cwTdFQVk3L13rW4JL3OJQV+iMtgCNBwbSJ2+WQjfIusxO/KmetA==",
+  "dgSpecHash": "mwl4+FnX8dRL/ZJ41m1c6DT15CetFNe1vlqCMGxBTmLZIz1IMSCJ8dp3A1CbMeMb/zgnJlUZJbTP84+uvsLqYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj",
+  "projectFilePath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Khalil\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\Khalil\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",

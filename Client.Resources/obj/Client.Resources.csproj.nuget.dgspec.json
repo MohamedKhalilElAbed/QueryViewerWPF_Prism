@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj": {}
+    "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj": {
+    "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj",
+        "projectUniqueName": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj",
         "projectName": "Client.Resources",
-        "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj",
+        "projectPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj",
         "packagesPath": "C:\\Users\\Khalil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Resources\\obj\\",
+        "outputPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Resources\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

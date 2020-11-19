@@ -1560,11 +1560,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client\\Client.Module.csproj",
+      "projectUniqueName": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client\\Client.Module.csproj",
       "projectName": "Client.Module",
-      "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client\\Client.Module.csproj",
+      "projectPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client\\Client.Module.csproj",
       "packagesPath": "C:\\Users\\Khalil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client\\obj\\",
+      "outputPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -1584,20 +1584,20 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Core\\Client.Core.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Core\\Client.Core.csproj"
+            "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Core\\Client.Core.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Core\\Client.Core.csproj"
             },
-            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj"
+            "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj"
             },
-            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj"
+            "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj"
             },
-            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj"
+            "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj"
             },
-            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Wpf\\Prism.Wpf\\Prism.Wpf.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Wpf\\Prism.Wpf\\Prism.Wpf.csproj"
+            "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Prism\\src\\Wpf\\Prism.Wpf\\Prism.Wpf.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Prism\\src\\Wpf\\Prism.Wpf\\Prism.Wpf.csproj"
             }
           }
         }

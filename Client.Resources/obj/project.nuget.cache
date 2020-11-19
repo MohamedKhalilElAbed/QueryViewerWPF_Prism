@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vk63eblSBUpiGJJ0FtNjF/zkJqlt2an8e9WE/hn6IMT2hx8tlLnFP4sL2QJHV4eSgS+G4vH4+ZjluKqRcaX1rg==",
+  "dgSpecHash": "TnOYGhRvhtwhGzx5UCCpmZpO9FQELEWVaS5yjI2D6e7Gc8lEqAeSIbNj2OL3tV81j6QisZ6JPBvjSa00KKN9zQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj",
+  "projectFilePath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
