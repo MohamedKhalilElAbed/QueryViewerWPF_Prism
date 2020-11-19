@@ -32,7 +32,7 @@ namespace Client.D_ViewModels
         public Requete Request { get; set; }
         IEventAggregator _ea;
 
-        private static int DefaultPageSize = 2;
+        private int DefaultPageSize = 2;
 
         private string _Title;
         public string Title
@@ -63,7 +63,15 @@ namespace Client.D_ViewModels
         private int _PageSize;
         public int PageSize {
             get { return _PageSize; }
-            set { SetProperty(ref _PageSize, value); }
+            set 
+            { 
+                if(value <= 0)
+                    return;
+                SetProperty(ref _PageSize, value);
+                PaginateInfosVisible = IsPaginateOn && PaginationOption && PageCount > 1;
+                if (TotalNumberOfRows != 0)
+                    PageCount = ComputePageCount();
+            }
         }
         private int _CurrentPage;
         public int CurrentPage {
@@ -73,7 +81,7 @@ namespace Client.D_ViewModels
         private int _PageCount;
         public int PageCount {
             get { return _PageCount; }
-            set { SetProperty(ref _PageCount, value); PaginateInfosVisible = _PageCount > 1; }
+            set { SetProperty(ref _PageCount, value); PaginateInfosVisible = IsPaginateOn && PaginationOption && PageCount > 1; }
         }
         private bool _HasPreviousPage;
         public bool HasPreviousPage {
@@ -90,7 +98,7 @@ namespace Client.D_ViewModels
             get { return _ResultDataView; }
             set { SetProperty(ref _ResultDataView, value); }
         }
-        public static bool _PaginationOption;
+        public bool _PaginationOption;
         public bool PaginationOption {
             get { return _PaginationOption; }
             set { SetProperty(ref _PaginationOption, value);
@@ -104,7 +112,11 @@ namespace Client.D_ViewModels
                     }
                 }
                 IsPaginateOn = _PaginationOption;
-                PaginateInfosVisible = IsPaginateOn && PaginationOption && PageCount > 1; 
+                PageSize = IsPaginateOn ? DefaultPageSize : int.MaxValue;
+                if (TotalNumberOfRows != 0)
+                    PageCount = ComputePageCount();
+                PaginateInfosVisible = IsPaginateOn && PaginationOption && PageCount > 1;
+                FillPage();
             }
         }
 
@@ -132,7 +144,7 @@ namespace Client.D_ViewModels
             PaginateCheckBoxCheckedCommand = new RelayCommand<string>(OnPaginateCheckBoxCheckedRequested);
             ExecuteRefeshRequestedCommand = new RelayCommand<DataGrid>(OnExecuteRefeshRequested);
             GridViewColumnHeaderClickedHandlerCommand = new RelayCommand<RoutedEventArgs>(OnGridViewColumnHeaderClickedHandlerRequested);
-            PageSizeTextBoxKeyDownCommand = new RelayCommand<KeyEventArgs>(OnPageSizeTextBoxKeyDownRequested);
+            PageSizeTextBoxKeyDownCommand = new RelayCommand<object>(OnPageSizeTextBoxKeyDownRequested);
             ExecutePreviousPageCommand = new RelayCommand<string>(OnExecutePreviousPageRequested);
             ExecuteNextPageCommand = new RelayCommand<string>(OnExecuteNextPageRequested);
            
@@ -249,18 +261,30 @@ namespace Client.D_ViewModels
             throw new NotImplementedException();
         }
 
-        public RelayCommand<KeyEventArgs> PageSizeTextBoxKeyDownCommand { get; private set; }
-        public event Action<bool> PageSizeTextBoxKeyDown = delegate { };
-        void OnPageSizeTextBoxKeyDownRequested(KeyEventArgs args)
+        public RelayCommand<object> PageSizeTextBoxKeyDownCommand { get; private set; }
+        public event Action<int, bool> PageSizeTextBoxKeyDown = delegate { };
+        void OnPageSizeTextBoxKeyDownRequested(object args)
         {
-            PageSizeTextBoxKeyDown(true);
+            
+            if ((args as KeyEventArgs).Key != Key.Enter)
+                return;
+            else
+            {
+                int val = DefaultPageSize;
+                if(int.TryParse(((args as KeyEventArgs).OriginalSource as TextBox).Text, out val))
+                {
+                    PageSizeTextBoxKeyDown(val, true);
+                }
+            }
+                
         }
 
-        private void PageSizeTextBox_KeyDown(bool modifyDefaultPageSize)
+        private void PageSizeTextBox_KeyDown(int args, bool modifyDefaultPageSize)
         {
+                PageSize = args;
                 CurrentPage = 1;
                 CurrentPage = 1;
-                PageCount = TotalNumberOfRows / PageSize + (TotalNumberOfRows % PageSize == 0 ? 0 : 1);
+                PageCount = ComputePageCount();
                 if(modifyDefaultPageSize)    
                     DefaultPageSize = PageSize;
                 FillPage();
@@ -306,7 +330,7 @@ namespace Client.D_ViewModels
             {
                 IsPaginateOn = true;
                 PageSize = DefaultPageSize;
-                PageSizeTextBoxKeyDown(false);
+                PageSizeTextBox_KeyDown(_PageSize, false);
             }
 
         }
@@ -317,7 +341,7 @@ namespace Client.D_ViewModels
             if (IsPaginateOn)
             {
                 IsPaginateOn = false;
-                //PageSize = int.MaxValue;
+                PageSize = int.MaxValue;
 
                 //PageSizeTextBoxKeyDown(false);
             }
@@ -335,8 +359,13 @@ namespace Client.D_ViewModels
         {
             PageSize = DefaultPageSize;
             CurrentPage = 1;
-            PageCount = TotalNumberOfRows / PageSize + (TotalNumberOfRows % PageSize == 0 ? 0 : 1);
+            PageCount = ComputePageCount();
             IsPaginateOn = true;
+        }
+
+        private int ComputePageCount()
+        {
+            return TotalNumberOfRows / PageSize + (TotalNumberOfRows % PageSize == 0 ? 0 : 1);
         }
 
         private DataGridColumnHeader GetTargetDataGridColumnHeader(object originalSource)
@@ -380,7 +409,7 @@ namespace Client.D_ViewModels
                 {
                     return;
                 }
-                PageCount = TotalNumberOfRows / PageSize + (TotalNumberOfRows % PageSize == 0 ? 0 : 1);
+                PageCount = ComputePageCount();
                 IDictionary<string, object> firstElement = queryResult.ElementAt(0);
                 columns = firstElement.Keys.ToArray();
 
@@ -392,6 +421,8 @@ namespace Client.D_ViewModels
         private void FillPage()
         {
             DataTable datatable = new DataTable();
+            if (columns == null)
+                return;
             for (int i = 0; i < columns.Length; ++i)
                 datatable.Columns.Add(columns[i]);
 

@@ -1774,11 +1774,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.Application\\Client.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Application\\Client.Application.csproj",
       "projectName": "Client.Application",
-      "projectPath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.Application\\Client.Application.csproj",
+      "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Application\\Client.Application.csproj",
       "packagesPath": "C:\\Users\\Khalil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.Application\\obj\\",
+      "outputPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -1798,26 +1798,26 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.Core\\Client.Core.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.Core\\Client.Core.csproj"
+            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Core\\Client.Core.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Core\\Client.Core.csproj"
             },
-            "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.Resources\\Client.Resources.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.Resources\\Client.Resources.csproj"
+            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj"
             },
-            "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.Services\\Client.Services.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.Services\\Client.Services.csproj"
+            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj"
             },
-            "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client\\Client.Module.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client\\Client.Module.csproj"
+            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client\\Client.Module.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client\\Client.Module.csproj"
             },
-            "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Prism\\src\\Prism.Core\\Prism.Core.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Prism\\src\\Prism.Core\\Prism.Core.csproj"
+            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Prism.Core\\Prism.Core.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Prism.Core\\Prism.Core.csproj"
             },
-            "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Prism\\src\\Wpf\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Prism\\src\\Wpf\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj"
+            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Wpf\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Wpf\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj"
             },
-            "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Prism\\src\\Wpf\\Prism.Wpf\\Prism.Wpf.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Prism\\src\\Wpf\\Prism.Wpf\\Prism.Wpf.csproj"
+            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Wpf\\Prism.Wpf\\Prism.Wpf.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Wpf\\Prism.Wpf\\Prism.Wpf.csproj"
             }
           }
         }

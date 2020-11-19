@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.Resources\\Client.Resources.csproj",
+      "projectUniqueName": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj",
       "projectName": "Client.Resources",
-      "projectPath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.Resources\\Client.Resources.csproj",
+      "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Resources\\Client.Resources.csproj",
       "packagesPath": "C:\\Users\\Khalil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.Resources\\obj\\",
+      "outputPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Resources\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

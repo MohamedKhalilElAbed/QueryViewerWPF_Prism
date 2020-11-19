@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.ConfigurationFiles\\Client.ConfigurationFiles.csproj",
+      "projectUniqueName": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.ConfigurationFiles\\Client.ConfigurationFiles.csproj",
       "projectName": "Client.ConfigurationFiles",
-      "projectPath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.ConfigurationFiles\\Client.ConfigurationFiles.csproj",
+      "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.ConfigurationFiles\\Client.ConfigurationFiles.csproj",
       "packagesPath": "C:\\Users\\Khalil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.ConfigurationFiles\\obj\\",
+      "outputPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.ConfigurationFiles\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

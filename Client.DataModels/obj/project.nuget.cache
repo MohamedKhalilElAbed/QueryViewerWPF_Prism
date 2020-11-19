@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3uIhW2+ArxBhC/jRzSAS2Le386DG2j4In8tz3PZ7mUPVLzQ5cKu4sNUUEP2I4GJ1RUhvBwnYlNSEgK2S8qUgqg==",
+  "dgSpecHash": "B3XLK6gm4Ply9zY9lmHV6i8kEIHfveZuuKRnvOinb7l6WKgHLbAk1YV2+v34KnXkj+mFggbqXdq+ENFeQ4edFA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.DataModels\\Client.DataModels.csproj",
+  "projectFilePath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

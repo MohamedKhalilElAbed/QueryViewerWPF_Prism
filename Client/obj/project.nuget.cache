@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "is8Fod3AI6GxeQxeuGEtkyU9Q2qTVUzmjw5TYuB0ItSHsXKeO4nC+RbNRP7a/QJhflHNpYgMN/6MF8IUAycMxA==",
+  "dgSpecHash": "pnVhzoiYy7MTCq4DijLeERttUFTibsGNLkARFIcKFmNIj0Dkhpsm3pF9InN00VAG01fBLtTqj5G15l0hBycgkg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client\\Client.Module.csproj",
+  "projectFilePath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client\\Client.Module.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Khalil\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\Khalil\\.nuget\\packages\\expression.blend.sdk.wpf\\1.0.1\\expression.blend.sdk.wpf.1.0.1.nupkg.sha512",

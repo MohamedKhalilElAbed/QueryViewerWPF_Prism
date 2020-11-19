@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BcGkU8oiUo/lzLw18oRy7/ZEt5XMv47xqItXICgCnZFNoAJqt3IA8piENSDE+/KuybRTUghnnbOTunfORhhhQA==",
+  "dgSpecHash": "P637kSxyzYBJVhrBTqBByLFZlrom1lJ3L1+cwTdFQVk3L13rW4JL3OJQV+iMtgCNBwbSJ2+WQjfIusxO/KmetA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Khalil\\Downloads\\c-sharp-dynamic-fundamentals\\2-c-sharp-dynamic-fundamentals-m02-exercise-files\\after\\DynamicSQLData\\Client.Services\\Client.Services.csproj",
+  "projectFilePath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Khalil\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\Khalil\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",

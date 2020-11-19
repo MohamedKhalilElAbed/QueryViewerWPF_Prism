@@ -73,7 +73,7 @@ namespace Client.D_ViewModels
         }
         public void ActivatePagination()
         {
-            QueryViewModel._PaginationOption = true;
+            //QueryViewModel._PaginationOption = true;
             for (int i = 0; i < Tabs.Count; ++i)
             {
                 Tabs[i].ActivatePagination();
@@ -134,7 +134,7 @@ namespace Client.D_ViewModels
         public void DeActivatePagination()
         {
 
-            QueryViewModel._PaginationOption = false;
+            //QueryViewModel._PaginationOption = false;
             for (int i = 0; i < Tabs.Count; ++i)
             {
                 Tabs[i].DeActivatePagination();
