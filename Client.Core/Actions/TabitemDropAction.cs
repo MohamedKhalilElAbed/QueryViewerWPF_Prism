@@ -30,9 +30,6 @@ namespace TabControlRegion
             IRegion region = RegionManager.GetObservableRegion(tabControl).Value;
             if (region == null)
                 return;
-
-            //var actionTabViewModel = DataContext as ActionTabViewModel;
-
             if (tabItemTarget != null 
                 && region.Views.Contains(tabItemTarget.Content))
             {
@@ -42,8 +39,6 @@ namespace TabControlRegion
                 {
                     int sourceIndex = tabsList.IndexOf(tabItemSource.Content);
                     int targetIndex = tabsList.IndexOf(tabItemTarget.Content);
-                    //var src = actionTabViewModal.Tabs[sourceIndex];
-                    //var target = actionTabViewModal.Tabs[targetIndex];
                     if (sourceIndex > targetIndex)
                     {
                         for (int i = 0; i < tabsList.Count; ++i)
@@ -55,11 +50,10 @@ namespace TabControlRegion
                             region.Add(tabsList[i]);
                         }
                         region.Add(tabsList[sourceIndex]);
-                        for (int i = targetIndex + 1; i < sourceIndex; ++i)
+                        for (int i = targetIndex; i < sourceIndex; ++i)
                         {
                             region.Add(tabsList[i]);
                         }
-                        region.Add(tabsList[targetIndex]);
                         for (int i = sourceIndex + 1; i < tabsList.Count; ++i)
                         {
                             region.Add(tabsList[i]);
@@ -76,8 +70,7 @@ namespace TabControlRegion
                         {
                             region.Add(tabsList[i]);
                         }
-                        region.Add(tabsList[targetIndex]);
-                        for (int i = sourceIndex + 1; i < targetIndex; ++i)
+                        for (int i = sourceIndex + 1; i < targetIndex + 1; ++i)
                         {
                             region.Add(tabsList[i]);
                         }
@@ -87,13 +80,9 @@ namespace TabControlRegion
                             region.Add(tabsList[i]);
                         }
                     }
-                    //actionTabViewModel.TabItem_Drop(actionTabs, tabItemSource, sourceIndex, tabItemTarget, targetIndex);
                     region.Activate(tabsList[sourceIndex]);
-                    //actionTabs.SelectedIndex = targetIndex;
                 }
             }
-            //if (region.Views.Contains(tabItem.Content))
-            //    region.Remove(tabItem.Content);
         }
 
         static T FindParent<T>(DependencyObject child) where T : DependencyObject
