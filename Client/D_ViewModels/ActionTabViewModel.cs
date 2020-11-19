@@ -19,7 +19,15 @@ namespace Client.D_ViewModels
 {
     public class ActionTabViewModel : BindableBase, INavigationAware
     {
-        public int SelectedIndex { get; set; }
+
+        private int _ActiveTabItemIndex;
+        public int ActiveTabItemIndex
+        {
+            get { return _ActiveTabItemIndex; }
+            set { SetProperty(ref _ActiveTabItemIndex, value); }
+        }
+
+        private IRegionManager _regionManager;
         public DelegateCommand<string> NavigateCommand { get; set; }
         public ActionTabViewModel(IRegionManager regionManager)
         {
@@ -30,7 +38,6 @@ namespace Client.D_ViewModels
         {
             _regionManager.RequestNavigate("TabRegion", navigationPath);
         }
-        private IRegionManager _regionManager;
 
         public void OnNavigatedTo(NavigationContext navigationContext)
         {
@@ -49,12 +56,7 @@ namespace Client.D_ViewModels
         {
         }
 
-        private int _ActiveTabItemIndex;
-        public int ActiveTabItemIndex
-        {
-            get { return _ActiveTabItemIndex; }
-            set { SetProperty(ref _ActiveTabItemIndex, value); }
-        }
+        
     }
 }
 

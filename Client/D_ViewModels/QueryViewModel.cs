@@ -1,30 +1,21 @@
-﻿using Client.D_Views;
-//using Client.F_Common;
-using Dapper;
-using Interactivity;
+﻿using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
-using Prism.Mvvm;
 using Prism.Regions;
-using Client.DataModels.C_Models;
 using Prism.Services.Dialogs;
 using Prism.Ioc;
 using Client.Services.Api;
-using Microsoft.Windows.Themes;
 using Prism.Events;
 using Client.Core.Events;
 using System.Windows.Controls;
 using System.ComponentModel;
 using TabControlRegion.Core;
-//using Unity;
 
 
 namespace Client.D_ViewModels

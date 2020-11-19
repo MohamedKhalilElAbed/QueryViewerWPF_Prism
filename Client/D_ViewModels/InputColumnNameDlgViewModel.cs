@@ -29,15 +29,10 @@ namespace Client.D_ViewModels
         public InputColumnNameDlgViewModel(IRegionManager regionManager)
         {
             _regionManager = regionManager;
-            //OldColName = oldColumnName;
             CloseCommand = new DelegateCommand(OnDialogClosed);
             OKCommand = new DelegateCommand(OnOKPressedRequested);
             OKPressed += OKButton_Click;
             CancelCommand = new DelegateCommand(OnDialogCanceled);
-
-            //OKPressed += () => Close();
-            //CancelPressed += () => Close();
-            //CancelPressed += CancelButton_Click;
         }
 
         public DelegateCommand CloseCommand { get; private set; }
@@ -71,7 +66,6 @@ namespace Client.D_ViewModels
                 parameters.Add("newColumnName", NewColumnName);
                 RequestClose?.Invoke(new DialogResult(ButtonResult.OK, parameters));
             }
-            //DialogResult = NewColumnName != null && NewColumnName != "";
         }
         public bool CanCloseDialog()
         {
@@ -81,17 +75,6 @@ namespace Client.D_ViewModels
         public void OnDialogClosed()
         {
             var parameters = new DialogParameters();
-            /*
-            if (NewColumnName != null && NewColumnName != "") {
-
-                parameters.Add("newColumnName", NewColumnName);
-                RequestClose?.Invoke(new DialogResult(ButtonResult.OK, parameters));
-            }
-            else
-            {
-                RequestClose?.Invoke(new DialogResult(ButtonResult.Cancel, new DialogParameters()));
-            }
-            */
             RequestClose?.Invoke(new DialogResult(ButtonResult.Cancel, new DialogParameters()));
 
 
@@ -99,8 +82,6 @@ namespace Client.D_ViewModels
 
         public void OnDialogCanceled()
         {
-            //var parameters = new DialogParameters();
-            //parameters.Add("newColumnName", NewColumnName);
             RequestClose?.Invoke(new DialogResult(ButtonResult.Cancel, new DialogParameters()));
         }
         
@@ -108,7 +89,6 @@ namespace Client.D_ViewModels
         public void OnDialogOpened(IDialogParameters parameters)
         {
            OldColName = parameters.GetValue<string>("oldColumnName");
-           //RequestClose?.Invoke(new DialogResult(ButtonResult.OK, parameters));
         }
     }
 }
