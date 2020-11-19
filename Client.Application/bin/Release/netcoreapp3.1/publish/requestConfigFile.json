@@ -1,0 +1,39 @@
+{
+	"Requetes" : [
+		{
+			"Description": "FirstQuery",
+			"ConnectionString": "Data Source=(localdb)\\v11.0;Initial Catalog=TestDynamic;Integrated Security=True",
+			"IsScript": true,
+			"ColumnNames": [ "Nome", "Nombre" ],
+			"Script": "SELECT Name, nb FROM Users"
+		},
+		{
+			"Description": "SecondQuery",
+			"ConnectionString": "Data Source=(localdb)\\v11.0;Initial Catalog=SecondTestDynamic;Integrated Security=True",
+			"IsScript": true,
+			"ColumnNames": [ "Id", "Product", "Quantity", "Total" ],
+			"Script": "SELECT * FROM Commandes"
+		},
+		{
+			"Description": "ThirdQuery",
+			"ConnectionString": "Data Source=(localdb)\\v11.0;Initial Catalog=SecondTestDynamic;Integrated Security=True",
+			"IsScript": false,
+			"ColumnNames": [ "Prod.", "Tot." ],
+			"Script": "computeInterestingProducts"
+		},
+		{
+			"Description": "FourthQuery",
+			"ConnectionString": "Data Source=(localdb)\\v11.0;Initial Catalog=TestDynamic;Integrated Security=True",
+			"IsScript": true,
+			"ColumnNames": null,
+			"Script": "SELECT Name, nb FROM Users"
+		},
+		{
+			"Description": "FifthQuery",
+			"ConnectionString": "Data Source=(localdb)\\v11.0;Initial Catalog=TestDynamic;Integrated Security=True",
+			"IsScript": true,
+			"ColumnNames": null,
+			"Script": "SELECT Name, nb as 'Nombre' FROM Users"
+		}
+	]
+}
