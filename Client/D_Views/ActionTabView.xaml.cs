@@ -43,26 +43,5 @@ namespace Client.D_Views
 
            return null;
        }
-
-       private void TabItem_Drop(object sender, DragEventArgs e)
-       {
-
-           var tabItemTarget = GetTargetTabItem(e.OriginalSource);
-            var actionTabViewModel = DataContext as ActionTabViewModel;
-           
-           if (tabItemTarget != null)
-           {
-               var tabItemSource = (TabItem)e.Data.GetData(typeof(TabItem));
-               if (tabItemTarget != tabItemSource)
-               {
-                     int sourceIndex = actionTabs.Items.IndexOf(tabItemSource.Content);
-                   int targetIndex = actionTabs.Items.IndexOf(tabItemTarget.Content);
-                    //var src = actionTabViewModal.Tabs[sourceIndex];
-                    //var target = actionTabViewModal.Tabs[targetIndex];
-                    actionTabViewModel.TabItem_Drop(actionTabs, tabItemSource, sourceIndex, tabItemTarget, targetIndex);
-                    actionTabs.SelectedIndex = targetIndex;
-                }
-            }
-       }
     }
 }
