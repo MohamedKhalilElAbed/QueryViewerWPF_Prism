@@ -20,8 +20,6 @@
             <TabControl.Resources>
                 <Style TargetType="TabItem">
                     <Setter Property="AllowDrop" Value="True"/>
-                    <EventSetter Event="PreviewMouseMove" Handler="TabItem_Drag"/>
-                    <!--<EventSetter Event="Drop" Handler="TabItem_Drop"/>-->
                     <Setter Property="Header" Value="{Binding DataContext.Title}"/>
                     <Setter Property="HeaderTemplate">
                         <Setter.Value>
@@ -30,6 +28,9 @@
                                     <i:Interaction.Triggers>
                                         <i:EventTrigger EventName="Drop">
                                             <tabctrl:TabitemDropAction/>
+                                        </i:EventTrigger>
+                                        <i:EventTrigger EventName="PreviewMouseMove">
+                                            <tabctrl:TabitemDragAction/>
                                         </i:EventTrigger>
                                     </i:Interaction.Triggers>
                                     <ContentControl VerticalAlignment="Center" HorizontalAlignment="Center"
