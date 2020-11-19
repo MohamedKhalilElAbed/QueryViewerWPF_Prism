@@ -1,18 +1,8 @@
 ﻿using Client.D_ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Windows.Threading;
 
 namespace Client.D_Views
 {
@@ -70,9 +60,7 @@ namespace Client.D_Views
                     //var src = actionTabViewModal.Tabs[sourceIndex];
                     //var target = actionTabViewModal.Tabs[targetIndex];
                     actionTabViewModel.TabItem_Drop(actionTabs, tabItemSource, sourceIndex, tabItemTarget, targetIndex);
-
-                    
-                   actionTabs.SelectedIndex = targetIndex;
+                    actionTabs.SelectedIndex = targetIndex;
                 }
             }
        }

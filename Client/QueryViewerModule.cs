@@ -13,9 +13,7 @@ namespace Client.Module
         private readonly IRegionManager _regionManager;
         public QueryViewerModule(IContainerProvider containerProvider)
         {
-            //_regionManager = regionManager;
             _regionManager = containerProvider.Resolve<IRegionManager>();
-
             _regionManager.RegisterViewWithRegion("MenuContentRegion", typeof(MenuView));
             _regionManager.RegisterViewWithRegion("RequeteListContentRegion", typeof(RequetesList));
             _regionManager.RegisterViewWithRegion("TabsContentRegion", typeof(ActionTabView));
@@ -23,19 +21,15 @@ namespace Client.Module
         }
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            IRegion MenuRegion = _regionManager.Regions["MenuContentRegion"];
-             //regionManager.RegisterViewWithRegion("RightRegion", typeof(MessageList));
-                        
+            //IRegion MenuRegion = _regionManager.Regions["MenuContentRegion"];        
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
 
-            containerRegistry.RegisterSingleton<IConfigurationService>(() => ConfigurationService.GetInstance());//new ContainerControlledLifetimeManager());
-            containerRegistry.RegisterSingleton<IRequetesExecutionService>(() => RequetesExecutionService.GetInstance());//new ContainerControlledLifetimeManager());
-            //containerRegistry.RegisterForNavigation<ActionTabView>();
+            containerRegistry.RegisterSingleton<IConfigurationService>(() => ConfigurationService.GetInstance());
+            containerRegistry.RegisterSingleton<IRequetesExecutionService>(() => RequetesExecutionService.GetInstance());
             containerRegistry.RegisterForNavigation<QueryView>("QueryView"); //TabsContentRegion
-            //containerRegistry.RegisterForNavigation<RequetesList>();
             containerRegistry.RegisterDialog<InputColumnNameDlg>();
         }
     }

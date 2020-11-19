@@ -11,24 +11,21 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_Display">
-                <MenuItem x:Name="paginationOption" Header="_Pagination" IsCheckable="True" IsChecked ="{Binding IsPaginationOptionOn, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" >
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="Checked">
-                            <i:InvokeCommandAction  
+        <MenuItem Header="_Display">
+            <MenuItem x:Name="paginationOption" Header="_Pagination" IsCheckable="True" IsChecked ="{Binding IsPaginationOptionOn, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Checked">
+                        <i:InvokeCommandAction  
                                 Command="{Binding PaginateMenuItemCheckedCommand}"
                              />
-                        </i:EventTrigger>
-                        <i:EventTrigger EventName="Unchecked">
-                            <i:InvokeCommandAction  
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="Unchecked">
+                        <i:InvokeCommandAction  
                                 Command="{Binding PaginateMenuItemUncheckedCommand}"
                              />
-                        </i:EventTrigger>
-                        <!--, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>-->
-                    </i:Interaction.Triggers>
-                    <!--IsChecked="{Binding IsPaginationOptionOn, Mode=TwoWay}"-->
-                    
-                </MenuItem>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
             </MenuItem>
-        </Menu>
+        </MenuItem>
+    </Menu>
 </UserControl>

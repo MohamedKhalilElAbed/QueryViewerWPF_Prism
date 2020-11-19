@@ -43,7 +43,11 @@ namespace Client.D_ViewModels
                 case "PaginationOption":
 
                     IsPaginateOn = _PaginationOption;
+                    PageSize = IsPaginateOn ? DefaultPageSize : int.MaxValue;
+                    PageCount = ComputePageCount();
                     PaginateInfosVisible = IsPaginateOn && PaginationOption && PageCount > 1;
+                    if (columns != null)
+                        FillPage();
                     break;
                 case "IsPaginateOn":
                     PaginateInfosVisible = IsPaginateOn && PaginationOption && PaginationOption && PageCount > 1;
@@ -170,7 +174,6 @@ namespace Client.D_ViewModels
             _DialogService = containerProvider.Resolve<IDialogService>();
             CurrentPage = 1;
             PaginationOption = true;
-            PageSize = IsPaginateOn ? DefaultPageSize : int.MaxValue;
             _ea.GetEvent<NavigationOptionEvent>().Subscribe(NavigationOptionMessageReceived);
         }
         private void NavigationOptionMessageReceived(bool message)
@@ -279,7 +282,7 @@ namespace Client.D_ViewModels
             if (args.Key != Key.Enter)
                 return;
             int size;
-            if(int.TryParse((args.Source as TextBox).Text, out size))
+            if(int.TryParse((args.Source as TextBox).Text, out size) && size > 0)
                 PageSizeTextBoxKeyDown(true, size);
         }
 
@@ -399,8 +402,6 @@ namespace Client.D_ViewModels
         {
             LastExecuted = "Last Execution date : " + DateTime.UtcNow.ToLongDateString() + " " + DateTime.UtcNow.ToLongTimeString();
             IEnumerable<dynamic> queryResult = _containerProvider.Resolve<IRequetesExecutionService>().ExecuteRequete(Request);
-            CurrentPage = 1;
-            PageCount = 1;
             CurrentPage = 1;
             PageCount = 1;
             TotalNumberOfRows = queryResult.Count();
