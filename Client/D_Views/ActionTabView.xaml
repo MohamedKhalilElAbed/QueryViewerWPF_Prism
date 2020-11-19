@@ -10,7 +10,8 @@
       xmlns:prism="http://prismlibrary.com/" 
       prism:ViewModelLocator.AutoWireViewModel="True"
       xmlns:views="clr-namespace:Client.D_Views"
-      xmlns:custInter="clr-namespace:Interactivity;assembly=Client.Core" 
+      xmlns:custInter="clr-namespace:Interactivity;assembly=Client.Core"
+      xmlns:tabctrl="clr-namespace:TabControlRegion;assembly=Client.Core"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
 
@@ -21,6 +22,24 @@
                     <Setter Property="AllowDrop" Value="True"/>
                     <EventSetter Event="PreviewMouseMove" Handler="TabItem_Drag"/>
                     <EventSetter Event="Drop" Handler="TabItem_Drop"/>
+                    <Setter Property="Header" Value="{Binding DataContext.Title}"/>
+                    <Setter Property="HeaderTemplate">
+                        <Setter.Value>
+                            <DataTemplate>
+                                <StackPanel x:Name="entetes" Orientation="Horizontal" Height="21" Width="Auto">
+                                    <ContentControl VerticalAlignment="Center" HorizontalAlignment="Center"
+                                            Margin="0,0,7,0" Content="{Binding}"/>
+                                    <Image Source="C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Resources\E_Icons\x-close-icon-16.jpg" Width="20" Height="20">
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="MouseDown">
+                                                <tabctrl:CloseTabAction/>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </Image>
+                                </StackPanel>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
                 </Style>
             </TabControl.Resources>
             <!--
@@ -46,24 +65,7 @@
                
             </TabControl.Template>
                  -->
-            <TabControl.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel x:Name="entetes" Orientation="Horizontal" Height="21" Width="Auto">
-                        <TextBlock Width="auto" Text="{Binding Path=Content.DataContext.Title, RelativeSource={RelativeSource AncestorType=TabItem}}"/>
-                        <Image Source="C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Resources\E_Icons\x-close-icon-16.jpg" Width="20" Height="20">
-                            <i:Interaction.Triggers>
-                                <i:EventTrigger EventName="MouseDown">
-                                    <custInter:EventCommand 
-                                        CommandName="CloseTabCommand" 
-                                        Command="{Binding DataContext.CloseTabCommand, RelativeSource={RelativeSource AncestorType={x:Type TabControl}}}"
-                                        CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=InvokeParameter}"
-                                />
-                                </i:EventTrigger>
-                            </i:Interaction.Triggers>
-                        </Image>
-                    </StackPanel>
-                </DataTemplate>
-            </TabControl.ItemTemplate>
+            
         </TabControl>
 
         <!--ItemSource="{Binding Tabs}" -->

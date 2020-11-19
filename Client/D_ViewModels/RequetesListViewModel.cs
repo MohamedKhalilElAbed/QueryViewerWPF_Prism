@@ -12,6 +12,7 @@ using Client.D_Views;
 using Prism.Ioc;
 using Prism.Events;
 using Client.Core.Events;
+using Prism.Commands;
 
 namespace Client.D_ViewModels
 {
@@ -34,48 +35,20 @@ namespace Client.D_ViewModels
             _regionManager = regionManager;
             _containerProvider = containerProvider;
             _ea = ea;
-            OpenRequeteCommand = new RelayCommand<Requete>(OnOpenRequete);
-            OpenRequeteRequested += OpenRequest;
-            OpenRequeteRequested += RequeteListeViewModel_OpenRequeteRequested;
+            NavigateCommand = new DelegateCommand<Requete>(Navigate);
             //LoadRequetList();
+        }
+        void Navigate(Requete requete)
+        {
+            NavigationParameters p = new NavigationParameters();
+            p.Add("requete", requete);
+            _regionManager.RequestNavigate("tabcontrol", "QueryView", p);
         }
 
         public void LoadRequetList()
         {
             Requetes = new ObservableCollection<Requete>(_configurationService.GetRequetes().Values);
         }
-        public RelayCommand<Requete> OpenRequeteCommand { get; private set; }
-        public event Action<Requete> OpenRequeteRequested = delegate { };
-        void OnOpenRequete(Requete requete)
-        {
-            OpenRequeteRequested(requete);
-        }
-
-        private void RequeteListeViewModel_OpenRequeteRequested(Requete obj)
-        {
-            //_ActionTabViewModel.ActiveTabItemIndex = 0;
-        }
-      
-        private void OpenRequest(Requete requete)
-        {
-            //_ActionTabViewModel.AddTab(requete, IsPaginationOptionOn);
-            var p = new NavigationParameters();
-            p.Add("requete", requete);
-            var view = _containerProvider.Resolve<QueryView>();
-            QueryViewModel qvm = view.DataContext as QueryViewModel;
-            qvm.Request = requete;
-            qvm.Title = requete.Name;
-            qvm.PaginationOption = true;
-            qvm.ExecuteRequest(null, null);
-            IRegion region = _regionManager.Regions["tabcontrol"];
-            region.Add(view);
-            region.Activate(view);
-            _ea.GetEvent<NouveauTabEvent>().Publish();
-            //QueryViewModel qvm = conta new QueryViewModel(requete, false, _regionManager, )
-
-            //_regionManager.RequestNavigate("ContentRegion", navigatePath);
-            //(((ActionTabView)(_regionManager.Regions["TabsContentRegion"].ActiveViews.GetEnumerator().Current)).DataContext as ActionTabViewModel).AddTab(requete, false);
-            //_regionManager.RequestNavigate("TabsContentRegion", "tabcontrol", p);
-        }
+        public DelegateCommand<Requete> NavigateCommand { get; set; }
     }
 }

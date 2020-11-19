@@ -34,7 +34,7 @@ namespace Client.Module
             containerRegistry.RegisterSingleton<IConfigurationService>(() => ConfigurationService.GetInstance());//new ContainerControlledLifetimeManager());
             containerRegistry.RegisterSingleton<IRequetesExecutionService>(() => RequetesExecutionService.GetInstance());//new ContainerControlledLifetimeManager());
             //containerRegistry.RegisterForNavigation<ActionTabView>();
-            containerRegistry.RegisterForNavigation<QueryView>(); //TabsContentRegion
+            containerRegistry.RegisterForNavigation<QueryView>("QueryView"); //TabsContentRegion
             //containerRegistry.RegisterForNavigation<RequetesList>();
             containerRegistry.RegisterDialog<InputColumnNameDlg>();
         }

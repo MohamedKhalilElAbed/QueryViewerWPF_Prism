@@ -31,9 +31,6 @@ namespace Client.D_ViewModels
 {
     public class QueryViewModel : ViewModelBase
     {
-        public Requete Request { get; set; }
-        IEventAggregator _ea;
-
         private static int DefaultPageSize = 2;
 
         protected void OnPropertyChanged(object src, PropertyChangedEventArgs args)
@@ -114,7 +111,7 @@ namespace Client.D_ViewModels
             get { return _ResultDataView; }
             set { SetProperty(ref _ResultDataView, value); }
         }
-        public static bool _PaginationOption;
+        public bool _PaginationOption;
         public bool PaginationOption
         {
             get { return _PaginationOption; }
@@ -172,6 +169,7 @@ namespace Client.D_ViewModels
 
             _DialogService = containerProvider.Resolve<IDialogService>();
             CurrentPage = 1;
+            PaginationOption = true;
             PageSize = IsPaginateOn ? DefaultPageSize : int.MaxValue;
             _ea.GetEvent<NavigationOptionEvent>().Subscribe(NavigationOptionMessageReceived);
         }
@@ -397,7 +395,7 @@ namespace Client.D_ViewModels
         }
 
 
-        public void ExecuteRequest(object sender, RoutedEventArgs e)
+        public override void ExecuteRequest(object sender, RoutedEventArgs e)
         {
             LastExecuted = "Last Execution date : " + DateTime.UtcNow.ToLongDateString() + " " + DateTime.UtcNow.ToLongTimeString();
             IEnumerable<dynamic> queryResult = _containerProvider.Resolve<IRequetesExecutionService>().ExecuteRequete(Request);

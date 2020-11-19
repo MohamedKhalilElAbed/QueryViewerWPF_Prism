@@ -24,7 +24,7 @@
                         <i:EventTrigger EventName="MouseDoubleClick">
                             <i:InvokeCommandAction 
                                 CommandParameter="{Binding ElementName=listViewRequetesDataBinding, Path=SelectedItem}"
-                                Command="{Binding OpenRequeteCommand}"
+                                Command="{Binding NavigateCommand}"
                              />
                             <!--"{Binding DataContext.OpenRequeteCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}"-->
                         </i:EventTrigger>

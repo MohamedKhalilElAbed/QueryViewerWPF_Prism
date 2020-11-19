@@ -48,7 +48,7 @@ namespace Client.Application
                 containerRegistry.RegisterSingleton<IConfigurationService>(() => ConfigurationService.GetInstance());//new ContainerControlledLifetimeManager());
                 containerRegistry.RegisterSingleton<IRequetesExecutionService>(() => RequetesExecutionService.GetInstance());//new ContainerControlledLifetimeManager());
                 containerRegistry.RegisterDialog<InputColumnNameDlg, InputColumnNameDlgViewModel>();//(() => Container.Resolve <InputColumnNameDlgViewModel>());
-                
+                //containerRegistry.RegisterForNavigation<QueryView, QueryViewModel>("QueryView");
             }
             protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
             {
