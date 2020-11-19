@@ -1,7 +1,4 @@
-﻿//using Client.F_Common;
-using Interactivity;
-using System;
-using System.Windows;
+﻿using System;
 using Prism.Mvvm;
 using Prism.Regions;
 using Prism.Services.Dialogs;
@@ -76,8 +73,6 @@ namespace Client.D_ViewModels
         {
             var parameters = new DialogParameters();
             RequestClose?.Invoke(new DialogResult(ButtonResult.Cancel, new DialogParameters()));
-
-
         }
 
         public void OnDialogCanceled()

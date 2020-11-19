@@ -45,7 +45,6 @@ namespace Client.F_Common
 
             if (results.Any())
             {
-
                 _errors[propertyName] = results.Select(c => c.ErrorMessage).ToList();
             }
             else

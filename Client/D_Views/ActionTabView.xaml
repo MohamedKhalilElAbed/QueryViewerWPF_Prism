@@ -3,18 +3,12 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
       xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-      xmlns:local="clr-namespace:Client.D_Views"
-      xmlns:vm="clr-namespace:Client.D_ViewModels"
       xmlns:prism="http://prismlibrary.com/" 
       prism:ViewModelLocator.AutoWireViewModel="True"
-      xmlns:views="clr-namespace:Client.D_Views"
-      xmlns:custInter="clr-namespace:Interactivity;assembly=Client.Core"
       xmlns:tabctrl="clr-namespace:TabControlRegion;assembly=Client.Core"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
-
     <Grid>
         <TabControl x:Name="actionTabs"  prism:RegionManager.RegionName="tabcontrol"  DockPanel.Dock="Right" Background="White" MaxWidth="800" Margin="1" SelectedIndex="{Binding ActiveTabItemIndex, Mode=TwoWay}">
             <TabControl.Resources>

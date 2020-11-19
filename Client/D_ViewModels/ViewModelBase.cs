@@ -3,7 +3,6 @@ using Client.DataModels.C_Models;
 using Client.F_Common;
 using Prism.Events;
 using Prism.Regions;
-using System.ComponentModel;
 using System.Windows;
 
 namespace TabControlRegion.Core

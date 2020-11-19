@@ -5,15 +5,19 @@ using Client.Services.Impl;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
+using Prism.Services.Dialogs;
 
 namespace Client.Module
 {
     public class QueryViewerModule : IModule
     {
+       
         private readonly IRegionManager _regionManager;
+        public static IContainerProvider ContainerProvider;
         public QueryViewerModule(IContainerProvider containerProvider)
         {
             _regionManager = containerProvider.Resolve<IRegionManager>();
+            ContainerProvider = containerProvider;
             _regionManager.RegisterViewWithRegion("MenuContentRegion", typeof(MenuView));
             _regionManager.RegisterViewWithRegion("RequeteListContentRegion", typeof(RequetesList));
             _regionManager.RegisterViewWithRegion("TabsContentRegion", typeof(ActionTabView));

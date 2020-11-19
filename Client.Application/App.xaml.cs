@@ -1,6 +1,7 @@
 ﻿using Client.Core.Regions;
 using Client.D_ViewModels;
 using Client.D_Views;
+using Client.GridAction;
 using Client.Module.D_Views;
 using Client.Services.Api;
 using Client.Services.Impl;
@@ -17,6 +18,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using TabControlRegion;
+using Unity.Lifetime;
 
 namespace Client.Application
 {
@@ -25,6 +28,7 @@ namespace Client.Application
     /// </summary>
     public partial class App : System.Windows.Application
     {
+
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -47,8 +51,11 @@ namespace Client.Application
 
                 containerRegistry.RegisterSingleton<IConfigurationService>(() => ConfigurationService.GetInstance());//new ContainerControlledLifetimeManager());
                 containerRegistry.RegisterSingleton<IRequetesExecutionService>(() => RequetesExecutionService.GetInstance());//new ContainerControlledLifetimeManager());
-                containerRegistry.RegisterDialog<InputColumnNameDlg, InputColumnNameDlgViewModel>();//(() => Container.Resolve <InputColumnNameDlgViewModel>());
-                //containerRegistry.RegisterForNavigation<QueryView, QueryViewModel>("QueryView");
+                containerRegistry.RegisterDialog<InputColumnNameDlg, InputColumnNameDlgViewModel>();//(() => Container.Resolve <InputColumnNameDlgViewModel>());                                                                                     //containerRegistry.RegisterForNavigation<QueryView, QueryViewModel>("QueryView");
+                containerRegistry.Register<DataGridColumnHeaderDoubleClickAction>();
+                containerRegistry.Register<RefeshRequestedMouseDownAction>();
+                containerRegistry.RegisterSingleton<IRegionNavigationContentLoader, ScopedRegionNavigationContentLoader>();//(new ContainerControlledLifetimeManager());
+
             }
             protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
             {
@@ -71,7 +78,21 @@ namespace Client.Application
             {
                 base.ConfigureRegionAdapterMappings(regionAdapterMappings);
                 regionAdapterMappings.RegisterMapping(typeof(StackPanel), Container.Resolve<StackPanelRegionAdapter>());
+            
             }
+            protected override void ConfigureDefaultRegionBehaviors(IRegionBehaviorFactory regionBehaviors) 
+            {
+                base.ConfigureDefaultRegionBehaviors(regionBehaviors);
+                regionBehaviors.AddIfMissing(RegionManagerAwareBehavior.BehaviorKey, typeof(RegionManagerAwareBehavior));
+            }
+
+            /*
+            protected override void ConfigureContainer()
+            {
+                base.ConfigureContainer();
+                ViewModelLocationProvider.SetDefaultViewModelFactory((type) => Container.Resolve(type));
+            }
+            */
 
         }
     } 

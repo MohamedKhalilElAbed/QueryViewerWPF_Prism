@@ -240,7 +240,11 @@ namespace Prism.Regions
         /// Adds a new view to the region.
         /// </summary>
         /// <param name="view">The view to add.</param>
-        /// <param name="viewName">The name of the view. This can be used to retrieve it later by calling <see cref="IRegion.GetView"/>.</param>
+        /// <param name="viewName">The name of the view. This can be used to retrieve it later by calling <see cref="IRegion.
+        /// 
+        /// 
+        /// 
+        /// "/>.</param>
         /// <returns>The <see cref="IRegionManager"/> that is set on the view if it is a <see cref="DependencyObject"/>. It will be the current region manager when using this overload.</returns>
         public IRegionManager Add(object view, string viewName)
         {

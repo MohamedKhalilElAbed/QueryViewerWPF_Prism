@@ -1,11 +1,6 @@
-﻿//using Client.F_Common;
-using Interactivity;
-using System;
-using System.Windows;
+﻿using System;
 using Prism.Mvvm;
 using Prism.Regions;
-using Prism.Services.Dialogs;
-using Prism.Commands;
 using Prism.Events;
 using Client.Core.Events;
 
@@ -52,7 +47,6 @@ namespace Client.D_ViewModels
 
         private void PaginateMenuItem_Checked()
         {
-            //_ActionTabViewModel.ActivatePagination();
             _ea.GetEvent<NavigationOptionEvent>().Publish(true);
         }
 
@@ -67,7 +61,6 @@ namespace Client.D_ViewModels
         private void PaginateMenuItem_Unchecked()
         {
             _ea.GetEvent<NavigationOptionEvent>().Publish(false);
-            //   _ActionTabViewModel.DeActivatePagination();
         }
 
     }

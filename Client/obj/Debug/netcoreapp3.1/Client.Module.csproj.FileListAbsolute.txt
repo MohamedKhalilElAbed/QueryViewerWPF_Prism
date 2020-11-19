@@ -76,3 +76,4 @@ C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client\obj\Debug\netcoreapp3.1
 C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client\obj\Debug\netcoreapp3.1\Client.Module.csproj.CopyComplete
 C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client\obj\Debug\netcoreapp3.1\Client.Module.dll
 C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client\obj\Debug\netcoreapp3.1\Client.Module.pdb
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs

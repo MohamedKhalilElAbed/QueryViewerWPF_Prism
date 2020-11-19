@@ -1,24 +1,14 @@
-﻿//using Client.F_Common;
-using Interactivity;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
-using System.Windows.Input;
-
-using Prism.Mvvm;
+﻿using Prism.Mvvm;
 using Prism.Regions;
 using Client.DataModels.C_Models;
-using System.Windows.Controls;
-using System.Windows;
-using System.Windows.Media;
-using System.Linq;
 using Prism.Commands;
+using Client.Core.Regions;
 
 namespace Client.D_ViewModels
 {
-    public class ActionTabViewModel : BindableBase, INavigationAware
+    public class ActionTabViewModel : BindableBase, INavigationAware, IRegionManagerAware
     {
+        public IRegionManager RegionManager { get; set; }
 
         private int _ActiveTabItemIndex;
         public int ActiveTabItemIndex
@@ -27,16 +17,15 @@ namespace Client.D_ViewModels
             set { SetProperty(ref _ActiveTabItemIndex, value); }
         }
 
-        private IRegionManager _regionManager;
         public DelegateCommand<string> NavigateCommand { get; set; }
-        public ActionTabViewModel(IRegionManager regionManager)
+
+        public ActionTabViewModel()
         {
-            _regionManager = regionManager;
             NavigateCommand = new DelegateCommand<string>(Navigate);
         }
         void Navigate(string navigationPath)
         {
-            _regionManager.RequestNavigate("TabRegion", navigationPath);
+            RegionManager.RequestNavigate("TabRegion", navigationPath);
         }
 
         public void OnNavigatedTo(NavigationContext navigationContext)
@@ -55,8 +44,6 @@ namespace Client.D_ViewModels
         public void OnNavigatedFrom(NavigationContext navigationContext)
         {
         }
-
-        
     }
 }
 

@@ -1,17 +1,10 @@
-﻿//using Client.F_Common;
-using Interactivity;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
+﻿using System.Collections.ObjectModel;
 using Prism.Mvvm;
 using Prism.Regions;
 using Client.DataModels.C_Models;
 using Client.Services.Api;
-using Client.D_Views;
 using Prism.Ioc;
 using Prism.Events;
-using Client.Core.Events;
 using Prism.Commands;
 
 namespace Client.D_ViewModels

@@ -3467,7 +3467,7 @@
             Adds a new view to the region.
             </summary>
             <param name="view">The view to add.</param>
-            <param name="viewName">The name of the view. This can be used to retrieve it later by calling <see cref="M:Prism.Regions.IRegion.GetView(System.String)"/>.</param>
+            <param name="viewName">The name of the view. This can be used to retrieve it later by calling <see cref="!:IRegion."/>.</param>
             <returns>The <see cref="T:Prism.Regions.IRegionManager"/> that is set on the view if it is a <see cref="T:System.Windows.DependencyObject"/>. It will be the current region manager when using this overload.</returns>
         </member>
         <member name="M:Prism.Regions.Region.Add(System.Object,System.String,System.Boolean)">

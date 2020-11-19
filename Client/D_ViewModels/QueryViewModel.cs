@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows;
-using System.Windows.Controls.Primitives;
 using System.Windows.Input;
-using System.Windows.Media;
 using Prism.Regions;
 using Prism.Services.Dialogs;
 using Prism.Ioc;
@@ -52,7 +50,7 @@ namespace Client.D_ViewModels
 
         public string[] columns;
 
-        private Dictionary<string, int> colDisplayIndex = new Dictionary<string, int>();
+        public Dictionary<string, int> colDisplayIndex = new Dictionary<string, int>();
 
         public Dictionary<string, string> colHeader = new Dictionary<string, string>();
 
@@ -146,8 +144,6 @@ namespace Client.D_ViewModels
             CurrentPageKeyDownCommand = new RelayCommand<KeyEventArgs>(OnCurrentPageKeyDownRequested);
             PaginateCheckBoxUnCheckedCommand = new RelayCommand<string>(OnPaginateCheckBoxUnCheckedRequested);
             PaginateCheckBoxCheckedCommand = new RelayCommand<string>(OnPaginateCheckBoxCheckedRequested);
-            ExecuteRefeshRequestedCommand = new RelayCommand<DataGrid>(OnExecuteRefeshRequested);
-            GridViewColumnHeaderClickedHandlerCommand = new RelayCommand<RoutedEventArgs>(OnGridViewColumnHeaderClickedHandlerRequested);
             PageSizeTextBoxKeyDownCommand = new RelayCommand<KeyEventArgs>(OnPageSizeTextBoxKeyDownRequested);
             ExecutePreviousPageCommand = new RelayCommand<string>(OnExecutePreviousPageRequested);
             ExecuteNextPageCommand = new RelayCommand<string>(OnExecuteNextPageRequested);
@@ -155,8 +151,6 @@ namespace Client.D_ViewModels
             CurrentPageKeyDown += CurrentPage_KeyDown;
             PaginateCheckBoxUnChecked += PaginateCheckBox_Unchecked;
             PaginateCheckBoxChecked += PaginateCheckBox_Checked;
-            ExecuteRefeshRequested += Execute_Refesh;
-            GridViewColumnHeaderClickedHandler += GridViewColumnHeader_ClickedHandler;
             PageSizeTextBoxKeyDown += PageSizeTextBox_KeyDown;
             ExecutePreviousPage += Execute_PreviousPage;
             ExecuteNextPage += Execute_NextPage;
@@ -166,10 +160,19 @@ namespace Client.D_ViewModels
             CurrentPage = 1;
             PaginationOption = true;
             _ea.GetEvent<NavigationOptionEvent>().Subscribe(NavigationOptionMessageReceived);
+            _ea.GetEvent<ColumnRenameEvent>().Subscribe(ColumnRenameMessageReceived, ((object o,  string s1, string   s2) arg) => arg.o == this);
+            _ea.GetEvent<RefreshEvent>().Subscribe(Execute_Refesh, (object o) => o == this);
+
         }
         private void NavigationOptionMessageReceived(bool message)
         {
             PaginationOption = message;
+        }
+        private void ColumnRenameMessageReceived((object, string , string) arg)
+        {
+
+            (object content,string label, string nouveauNom) = arg;
+            colHeader[label] = nouveauNom;
         }
         private IRegionManager _regionManager;
         private IContainerProvider _containerProvider;
@@ -213,51 +216,9 @@ namespace Client.D_ViewModels
             SetPaginationPropertiesOff();
             FillPage();
         }
-        public RelayCommand<DataGrid> ExecuteRefeshRequestedCommand { get; private set; }
-        public event Action<DataGrid> ExecuteRefeshRequested = delegate { };
-
-        void OnExecuteRefeshRequested(DataGrid parameter)
+        public void Execute_Refesh(object o)
         {
-            ExecuteRefeshRequested(parameter);
-        }
-        public void Execute_Refesh(DataGrid datagrid)
-        {
-            for (int i = 0; i < ResultDataView.Table.Columns.Count; ++i)
-            {
-                colDisplayIndex[datagrid.Columns[i].SortMemberPath] = datagrid.Columns[i].DisplayIndex;
-                //colHeader[gridContainingRequeteResults.Columns[i].SortMemberPath] = (string)gridContainingRequeteResults.Columns[i].Header;
-            }
             ExecuteRequest(null, null);
-        }
-
-        public RelayCommand<RoutedEventArgs> GridViewColumnHeaderClickedHandlerCommand { get; private set; }
-        public event Action<RoutedEventArgs> GridViewColumnHeaderClickedHandler = delegate { };
-        void OnGridViewColumnHeaderClickedHandlerRequested(RoutedEventArgs args)
-        {
-            GridViewColumnHeaderClickedHandler(args);
-        }
-
-        void GridViewColumnHeader_ClickedHandler(RoutedEventArgs e)
-        {
-            if (e == null)
-            {
-                return;
-            }
-            var headerClicked = GetTargetDataGridColumnHeader(e.OriginalSource);// as DataGridColumnHeader;
-            if (headerClicked != null)
-            {
-                var p = new DialogParameters();
-                p.Add("oldColumnName", (string)headerClicked.Column.Header);
-                _DialogService.ShowDialog("InputColumnNameDlg", p, (IDialogResult obj) =>
-                {
-
-                    if (obj.Result == ButtonResult.OK)
-                    {
-                        headerClicked.Column.Header = obj.Parameters.GetValue<string>("newColumnName");
-                        colHeader[headerClicked.Column.SortMemberPath] = (string)headerClicked.Column.Header;
-                    }
-                });
-            }
         }
 
         private void renameCompete(IDialogResult obj)
@@ -361,34 +322,6 @@ namespace Client.D_ViewModels
             IsPaginateOn = true;
         }
 
-        private DataGridColumnHeader GetTargetDataGridColumnHeader(object originalSource)
-        {
-            var current = originalSource as DependencyObject;
-
-            while (current != null)
-            {
-                var tabItem = current as DataGridColumnHeader;
-                if (tabItem != null)
-                {
-                    return tabItem;
-                }
-                /*if (current is DataGridHeaderBorder dataGridHeaderBorder)
-                {
-
-                    var candidate = dataGridHeaderBorder.TemplatedParent as DataGridColumnHeader;
-                    if (candidate != null)
-                    {
-                        return candidate;
-                    }
-                }
-                */
-                current = VisualTreeHelper.GetParent(current);
-            }
-
-            return null;
-        }
-
-
         public override void ExecuteRequest(object sender, RoutedEventArgs e)
         {
             LastExecuted = "Last Execution date : " + DateTime.UtcNow.ToLongDateString() + " " + DateTime.UtcNow.ToLongTimeString();
@@ -429,45 +362,15 @@ namespace Client.D_ViewModels
             HasPreviousPage = CurrentPage > 1;
             HasNextPage = CurrentPage < PageCount;
         }
-
-        public void AutoGeneratedColumns(DataGrid grid)
-        {
-
-            if (Request.ColNames != null)
-            {
-                for (int i = 0; i < Request.ColNames.Length; ++i)
-                {
-                    //grid.Columns[i].Header = Request.ColNames[i];
-                }
-            }
-
-            for (int i = 0; i < grid.Columns.Count; ++i)
-            {
-                if (colHeader.ContainsKey(grid.Columns[i].SortMemberPath))
-                {
-                    grid.Columns[i].Header = colHeader[grid.Columns[i].SortMemberPath];
-                }
-            }
-            if (colDisplayIndex.Count == grid.Columns.Count)
-            {
-                for (int i = 0; i < grid.Columns.Count; ++i)
-                {
-                    if (colDisplayIndex.ContainsKey(grid.Columns[i].SortMemberPath))
-                    {
-                        grid.Columns[i].DisplayIndex = colDisplayIndex[grid.Columns[i].SortMemberPath];
-                    }
-                }
-            }
-
-        }
-        
-
-        /*
-private void CurrentPage_PreviewTextInput(object sender, TextCompositionEventArgs e)
-{
-  int pagenum;
-  e.Handled = int.TryParse(currentPage.Text, out pagenum) && pagenum >= 1 && pagenum <= pageCount;
-}
-*/
     }
 }
+
+
+
+/*
+        private void CurrentPage_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+          int pagenum;
+          e.Handled = int.TryParse(currentPage.Text, out pagenum) && pagenum >= 1 && pagenum <= pageCount;
+        }
+        */
