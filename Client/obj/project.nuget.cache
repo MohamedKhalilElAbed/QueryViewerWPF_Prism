@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c4rsQ+EI7JhBjNf7dsPNd8CiHPzPsdUE8MrpL73IfWydxTjgDGJhu9cF3pwgv3rHJEqEx4BJKK9VyPrZWzBDPQ==",
+  "dgSpecHash": "02iuWC7R6ktQvDra8F1+deAx83wIBdM6YtGtqs8YvsTq4g5kEXOBTTbO/QSvDCtlW+ouS6fciRU107c0ZWKioQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client\\Client.Module.csproj",
+  "projectFilePath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client\\Client.Module.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Khalil\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\Khalil\\.nuget\\packages\\expression.blend.sdk.wpf\\1.0.1\\expression.blend.sdk.wpf.1.0.1.nupkg.sha512",

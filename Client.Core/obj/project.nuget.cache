@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3eMkhVYTvxEArNv4xaLlXrPEqNdRZzG9USQhtzVq8FqbMq0C/zcu+1LEDxq+Q+LRT+t2klJi0OmNGEsSi19Wgw==",
+  "dgSpecHash": "k9CLv2g5J9zCH+VKqRlEJPbe+bTdChap8aml0wKy65T79yo+esMHbg+t5XmF/excP4iriqkYpzrJbTYZqVxfCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Core\\Client.Core.csproj",
+  "projectFilePath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Core\\Client.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Khalil\\.nuget\\packages\\expression.blend.sdk.wpf\\1.0.1\\expression.blend.sdk.wpf.1.0.1.nupkg.sha512",
     "C:\\Users\\Khalil\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",

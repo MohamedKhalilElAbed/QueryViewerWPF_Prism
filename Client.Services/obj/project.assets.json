@@ -1013,11 +1013,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj",
+      "projectUniqueName": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj",
       "projectName": "Client.Services",
-      "projectPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj",
+      "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj",
       "packagesPath": "C:\\Users\\Khalil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.Services\\obj\\",
+      "outputPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -1036,12 +1036,13 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj"
+            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.DataModels\\Client.DataModels.csproj"
             },
-            "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Prism\\src\\Prism.Core\\Prism.Core.csproj": {
-              "projectPath": "C:\\Users\\Khalil\\source\\repos\\QueryViewerWPF_Prism\\Prism\\src\\Prism.Core\\Prism.Core.csproj"
+            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Prism.Core\\Prism.Core.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Prism.Core\\Prism.Core.csproj"
             }
           }
         }
@@ -1054,6 +1055,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Dapper": {
             "target": "Package",
@@ -1091,7 +1093,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
