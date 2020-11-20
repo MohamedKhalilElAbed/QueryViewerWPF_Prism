@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Interactivity;
 using System.Windows.Media;
 using Prism.Ioc;
+using System.Windows.Media.Imaging;
 
 namespace Client.GridAction
 {
@@ -24,19 +25,33 @@ namespace Client.GridAction
             if (args == null)
                 return;
 
+            RotateImage(args);
+
             var grid = FindParent<Grid>(args.OriginalSource as DependencyObject);
             if (grid == null)
                 return;
             DataGrid datagrid = FindChild<DataGrid>(grid as DependencyObject);
             if (datagrid == null)
                 return;
-            var queryViewModel = grid.DataContext as QueryViewModel ;
+            var queryViewModel = grid.DataContext as QueryViewModel;
 
             for (int i = 0; i < datagrid.Columns.Count; ++i)
             {
                 queryViewModel.colDisplayIndex[datagrid.Columns[i].SortMemberPath] = datagrid.Columns[i].DisplayIndex;
             }
             _ea.GetEvent<RefreshEvent>().Publish((datagrid.DataContext));
+        }
+
+        private static void RotateImage(RoutedEventArgs args)
+        {
+            Image im = args.OriginalSource as Image;
+            var Original = (BitmapImage)im.Source;
+            var Rotated = new BitmapImage();
+            Rotated.BeginInit();
+            Rotated.UriSource = Original.UriSource;
+            Rotated.Rotation = Rotation.Rotate270;
+            Rotated.EndInit();
+            //im.Source = Rotated;// = Rotated;
         }
 
         static T FindChild<T>(DependencyObject dependencyObject) where T : DependencyObject

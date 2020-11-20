@@ -10,6 +10,7 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              xmlns:gridaction="clr-namespace:Client.GridAction"
              mc:Ignorable="d" 
+             x:Name="QueryDetail"
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="VisibleIfTrueConverter" />
@@ -18,14 +19,33 @@
     <Grid>
         <StackPanel x:Name="stackPanelContentOfTab" Margin="3,3,0,0">
             <StackPanel x:Name="stackPanelRefresh" Height="auto" Orientation="Horizontal">
-                <Image x:Name="refreshImage" Source="{StaticResource RefreshIcon}" Width="20" Height="20">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="MouseDown">
-                            <gridaction:RefeshRequestedMouseDownAction/>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                </Image>
-                <Label x:Name="lastExecuted" Content="{Binding LastExecuted}" VerticalAlignment="Center"/>
+                <StackPanel  Width="23" Height="23" VerticalAlignment="Bottom">
+                    <Image x:Name="refreshImage" Source="{StaticResource RefreshIcon}" Width="16" Height="16"  Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                        <Image.LayoutTransform>
+                            <RotateTransform />
+                        </Image.LayoutTransform>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseDown">
+                                <gridaction:RefeshRequestedMouseDownAction/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <Image.Triggers>
+                            <EventTrigger RoutedEvent="Image.MouseLeftButtonUp">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="refreshImage"
+                                                     Storyboard.TargetProperty="(Image.LayoutTransform).(RotateTransform.Angle)"
+                                                     From="{Binding Path=From, ElementName=QueryDetail, BindsDirectlyToSource=True}"
+                                                     To="{Binding Path=To,  ElementName=QueryDetail,   BindsDirectlyToSource=True}"
+                                                     Duration="0:0:1" 
+                                                     SpeedRatio="3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Image.Triggers>
+                    </Image>
+                </StackPanel>
+                <Label x:Name="lastExecuted" Content="{Binding LastExecuted}" VerticalAlignment="Top"/>
             </StackPanel>
             <StackPanel x:Name="stackPanelPaginationOptions" Height="auto" Orientation="Horizontal" Visibility="{Binding PaginationOption, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource VisibleIfTrueConverter}}">
                 <CheckBox x:Name="paginateCheckBox" Content="Paginate " IsChecked="{Binding IsPaginateOn, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" VerticalAlignment="Center">
