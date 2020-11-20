@@ -7,6 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="E_Icons\refresh-icon.png" />
+    <None Remove="E_Icons\x-close-icon-16.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="E_Icons\refresh-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="E_Icons\x-close-icon-16.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Client.Core\Client.Core.csproj" />
     <ProjectReference Include="..\Client.Resources\Client.Resources.csproj" />
     <ProjectReference Include="..\Client.Services\Client.Services.csproj" />
@@ -14,6 +28,12 @@
     <ProjectReference Include="..\Prism\src\Prism.Core\Prism.Core.csproj" />
     <ProjectReference Include="..\Prism\src\Wpf\Prism.Unity.Wpf\Prism.Unity.Wpf.csproj" />
     <ProjectReference Include="..\Prism\src\Wpf\Prism.Wpf\Prism.Wpf.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

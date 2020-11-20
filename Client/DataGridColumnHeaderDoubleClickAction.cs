@@ -41,7 +41,6 @@ namespace Client.GridAction
             {
                 var p = new DialogParameters();
                 p.Add("oldColumnName", (string)headerClicked.Column.Header);
-                //var dialogService = 
 
                 var grid = FindParent<Grid>(args.OriginalSource as DependencyObject);
                 if (grid == null)

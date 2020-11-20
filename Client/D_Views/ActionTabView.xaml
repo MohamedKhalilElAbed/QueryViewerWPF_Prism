@@ -29,7 +29,7 @@
                                     </i:Interaction.Triggers>
                                     <ContentControl VerticalAlignment="Center" HorizontalAlignment="Center"
                                             Margin="0,0,7,0" Content="{Binding}"/>
-                                    <Image Source="C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Resources\E_Icons\x-close-icon-16.jpg" Width="20" Height="20">
+                                    <Image Source="{StaticResource CloseIcon}" Width="20" Height="20">
                                         <i:Interaction.Triggers>
                                             <i:EventTrigger EventName="MouseDown">
                                                 <tabctrl:CloseTabAction/>

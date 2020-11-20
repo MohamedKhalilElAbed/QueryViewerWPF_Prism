@@ -18,10 +18,8 @@
     <Grid>
         <StackPanel x:Name="stackPanelContentOfTab" Margin="3,3,0,0">
             <StackPanel x:Name="stackPanelRefresh" Height="auto" Orientation="Horizontal">
-                <Image x:Name="refreshImage" Source="C:\Users\Khalil\Downloads\c-sharp-dynamic-fundamentals\2-c-sharp-dynamic-fundamentals-m02-exercise-files\after\DynamicSQLData\Client.Resources\E_Icons\refresh-icon.png"
-                    Width="20" Height="20">
+                <Image x:Name="refreshImage" Source="{StaticResource RefreshIcon}" Width="20" Height="20">
                     <i:Interaction.Triggers>
-
                         <i:EventTrigger EventName="MouseDown">
                             <gridaction:RefeshRequestedMouseDownAction/>
                         </i:EventTrigger>

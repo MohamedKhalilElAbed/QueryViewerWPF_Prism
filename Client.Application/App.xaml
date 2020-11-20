@@ -4,9 +4,11 @@
              xmlns:local="clr-namespace:Client.Application"
              >
     <Application.Resources>
-        <Image x:Key="CloseIcon" Source="pack://application:,,,/Client.Resources;component/E_Icons/x-close-icon-16.jpg"/>
+        <BitmapImage x:Key="CloseIcon" UriSource="E_Icons/x-close-icon-16.jpg"/>
+        <BitmapImage x:Key="RefreshIcon" UriSource="E_Icons/refresh-icon.png"/>
+
         <!-- UriSource="../Client.Resources/E_Icons/x-close-icon-16.jpg" />-->
-        <Image x:Key="RefreshIcon" Source="pack://application:,,,/Client.Resources;component/E_Icons/refresh-icon.png" />
+        <!--<Image x:Key="RefreshIcon"/>-->
         <!--="../Client.Resources/E_Icons/refresh-icon.png"-->
     </Application.Resources>
 </Application>
