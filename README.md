@@ -14,7 +14,7 @@ Before Launching  (2 Steps):
       C:\Users\Khalil\source\repos\QueryViewerWPF_Prism\Client.Application\bin\Release\netcoreapp3.1\A_Configs\requestConfigFile.json
       
       example :
-      	{
+	{
 		"Description": "FirstQuery",
 		"ConnectionString": "Data Source=(localdb)\\v11.0;Initial Catalog=TestDynamic;Integrated Security=True",
 		"IsScript": true,
@@ -24,13 +24,14 @@ Before Launching  (2 Steps):
 		  
       or 
       
-      	{
+	{
 		"Description": "ThirdQuery",
 		"ConnectionString": "Data Source=(localdb)\\v11.0;Initial Catalog=SecondTestDynamic;Integrated Security=True",
 		"IsScript": false,
 		"ColumnNames": null,
 		"Script": "computeInterestingProducts"
 	}
+	
 		  
 		  
  2 - Set the value of configFile (requestConfigFile.json) to the json config file path in file :
