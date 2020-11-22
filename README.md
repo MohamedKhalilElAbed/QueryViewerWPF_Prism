@@ -26,7 +26,7 @@ Before Launching  (2 Steps):
  To Launch the application :
  - Double click on Client.Application.exe file
      C:\Users\Khalil\source\repos\QueryViewerWPF_Prism\Client.Application\bin\Release\netcoreapp3.1\Client.Application.exe
-     
+
 For ui tests  (prerequesite for Katalan : Enable development features for Windows and install and launch WinAppDriver.exe):
  1- Install and open Katalon Studio.
  2- Menu > Open >Folder 
