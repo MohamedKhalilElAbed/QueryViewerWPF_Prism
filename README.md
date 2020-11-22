@@ -1,10 +1,18 @@
 # QueryViewerWPF_Prism
 Visual studio 2019, .NetCore 3.1, WPF.
+
+
 ui automated tests using Katalan studio.
+
+
 Before Launching  (2 Steps):
 
-  1 - Edit requestConfigFile.json configuration file : it should contain query sql db queries or storedProcedure with their respective connectionstring. Value of "ColumnNames" should be null.
+
+  1 - Edit requestConfigFile.json configuration file : it should contain query sql db queries or storedProcedure with their respective connectionstring.
+  Value of "ColumnNames" should be null.
+  
       C:\Users\Khalil\source\repos\QueryViewerWPF_Prism\Client.Application\bin\Release\netcoreapp3.1\A_Configs\requestConfigFile.json
+      
       example :
       {
         "Description": "FirstQuery",
@@ -13,7 +21,9 @@ Before Launching  (2 Steps):
         "ColumnNames":null,
         "Script": "SELECT Name, nb FROM Users"
 		  }
+		  
       or 
+      
       {
         "Description": "ThirdQuery",
         "ConnectionString": "Data Source=(localdb)\\v11.0;Initial Catalog=SecondTestDynamic;Integrated Security=True",
@@ -22,12 +32,15 @@ Before Launching  (2 Steps):
         "Script": "computeInterestingProducts"
 		  }
 		  
+		  
  2 - Set the value of configFile (requestConfigFile.json) to the json config file path in file :
       C:\Users\Khalil\source\repos\QueryViewerWPF_Prism\Client.Application\bin\Release\netcoreapp3.1\Client.Application.dll.config 
  
  
  To Launch the application :
+ 
  - Double click on Client.Application.exe file
+ 
      C:\Users\Khalil\source\repos\QueryViewerWPF_Prism\Client.Application\bin\Release\netcoreapp3.1\Client.Application.exe
 
 
