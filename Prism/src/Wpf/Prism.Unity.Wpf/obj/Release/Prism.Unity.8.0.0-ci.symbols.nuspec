@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Prism.Unity</id>
+    <version>8.0.0-ci</version>
+    <authors>Brian Lagunas,Dan Siegel</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>prism-logo.png</icon>
+    <projectUrl>https://github.com/PrismLibrary/Prism</projectUrl>
+    <description>Use these extensions to build Prism applications based on Unity.</description>
+    <tags>prism unity mvvm wpf xaml</tags>
+    <repository type="git" url="https://github.com/PrismLibrary/Prism" commit="51c688cc66163e5977d2684a932864f7cb18991b" />
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="Prism.Wpf" version="8.0.0-ci" exclude="Build,Analyzers" />
+        <dependency id="Unity.Container" version="5.11.8" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Wpf\Prism.Unity.Wpf\bin\Release\netcoreapp3.1\Prism.Unity.Wpf.pdb" target="lib\netcoreapp3.1\Prism.Unity.Wpf.pdb" />
+  </files>
+</package>

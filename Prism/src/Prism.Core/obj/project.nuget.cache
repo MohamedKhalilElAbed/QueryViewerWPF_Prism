@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "/+7xYz4ZIERRQgUZ2Vp1HQpMSKveVkSpGr6ne2gC3ee6DjPVATwUTSig/6YaQrRclFuCyG1W7tF7C2UPKHgvDg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Prism\\src\\Prism.Core\\Prism.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Khalil\\.nuget\\packages\\microsoft.build.tasks.git\\1.1.0-beta-20204-02\\microsoft.build.tasks.git.1.1.0-beta-20204-02.nupkg.sha512",
+    "C:\\Users\\Khalil\\.nuget\\packages\\microsoft.sourcelink.common\\1.1.0-beta-20204-02\\microsoft.sourcelink.common.1.1.0-beta-20204-02.nupkg.sha512",
+    "C:\\Users\\Khalil\\.nuget\\packages\\microsoft.sourcelink.github\\1.1.0-beta-20204-02\\microsoft.sourcelink.github.1.1.0-beta-20204-02.nupkg.sha512",
+    "C:\\Users\\Khalil\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

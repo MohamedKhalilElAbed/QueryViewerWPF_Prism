@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Bc/1hPDDlm4m7UZvejbA8ysIcmlMPfTuwViiYDfFwP/ibXzuWn9J3k+VGScjqnlfttg3S1UyOwXIpx9VOlFkFA==",
+  "dgSpecHash": "lf8STiYMNBLdblAT2dTh2wA7wHQRgrbM+5IcbnkGK4yAYch4JLJpNfBtzIM67hAxj0Oru+510kP6n0UPgGvf8g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Application\\Client.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Khalil\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
+    "C:\\Users\\Khalil\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\Khalil\\.nuget\\packages\\expression.blend.sdk.wpf\\1.0.1\\expression.blend.sdk.wpf.1.0.1.nupkg.sha512",
     "C:\\Users\\Khalil\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Khalil\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

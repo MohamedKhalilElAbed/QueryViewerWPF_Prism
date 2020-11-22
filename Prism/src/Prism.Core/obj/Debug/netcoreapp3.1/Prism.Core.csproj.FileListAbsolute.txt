@@ -1,0 +1,14 @@
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Prism.Core\bin\Debug\netcoreapp3.1\Prism.deps.json
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Prism.Core\bin\Debug\netcoreapp3.1\Prism.dll
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Prism.Core\bin\Debug\netcoreapp3.1\Prism.pdb
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Prism.Core\bin\Debug\netcoreapp3.1\Prism.xml
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Prism.Core\obj\Debug\netcoreapp3.1\Prism.Core.csprojAssemblyReference.cache
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Prism.Core\obj\Debug\netcoreapp3.1\Prism.Properties.Resources.resources
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Prism.Core\obj\Debug\netcoreapp3.1\Prism.Core.csproj.GenerateResource.cache
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Prism.Core\obj\Debug\netcoreapp3.1\Prism.Core.AssemblyInfoInputs.cache
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Prism.Core\obj\Debug\netcoreapp3.1\Prism.Core.AssemblyInfo.cs
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Prism.Core\obj\Debug\netcoreapp3.1\Prism.Core.csproj.CoreCompileInputs.cache
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Prism.Core\obj\Debug\netcoreapp3.1\Prism.Core.sourcelink.json
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Prism.Core\obj\Debug\netcoreapp3.1\Prism.dll
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Prism.Core\obj\Debug\netcoreapp3.1\Prism.xml
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Prism\src\Prism.Core\obj\Debug\netcoreapp3.1\Prism.pdb

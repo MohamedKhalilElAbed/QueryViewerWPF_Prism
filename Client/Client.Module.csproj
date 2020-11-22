@@ -28,6 +28,7 @@
     <ProjectReference Include="..\Client.DataModels\Client.DataModels.csproj" />
     <ProjectReference Include="..\Client.Resources\Client.Resources.csproj" />
     <ProjectReference Include="..\Client.Services\Client.Services.csproj" />
+    <ProjectReference Include="..\Client.Views\Client.Views.csproj" />
     <ProjectReference Include="..\Prism\src\Wpf\Prism.Wpf\Prism.Wpf.csproj" />
   </ItemGroup>
 

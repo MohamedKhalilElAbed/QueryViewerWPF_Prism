@@ -67,7 +67,7 @@ namespace Client.Module.D_Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Client.Module;component/d_views/menuview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Client.Module;V1.0.0.0;component/d_views/menuview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\D_Views\MenuView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

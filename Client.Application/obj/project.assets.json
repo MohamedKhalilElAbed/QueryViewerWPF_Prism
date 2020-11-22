@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Dapper/2.0.35": {
+      "Dapper/2.0.78": {
         "type": "package",
         "dependencies": {
           "System.Reflection.Emit.Lightweight": "4.7.0"
@@ -499,6 +499,35 @@
           "lib/netcoreapp3.0/Unity.Container.dll": {}
         }
       },
+      "Client.Actions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Client.Core": "1.0.0",
+          "Prism.Core": "8.0.0-ci",
+          "Prism.Unity": "8.0.0-ci",
+          "Prism.Wpf": "8.0.0-ci"
+        },
+        "compile": {
+          "bin/placeholder/Client.Actions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Client.Actions.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "Client.ConfigurationFiles/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Client.ConfigurationFiles.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Client.ConfigurationFiles.dll": {}
+        }
+      },
       "Client.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -536,6 +565,7 @@
           "Client.DataModels": "1.0.0",
           "Client.Resources": "1.0.0",
           "Client.Services": "1.0.0",
+          "Client.Views": "1.0.0",
           "Expression.Blend.Sdk.WPF": "1.0.1",
           "Microsoft.Xaml.Behaviors.Wpf": "1.1.19",
           "Prism.Wpf": "8.0.0-ci"
@@ -578,6 +608,47 @@
         "runtime": {
           "bin/placeholder/Client.Services.dll": {}
         }
+      },
+      "Client.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Client.ConfigurationFiles": "1.0.0",
+          "Client.Core": "1.0.0",
+          "Client.DataModels": "1.0.0",
+          "Client.Resources": "1.0.0",
+          "Client.Services": "1.0.0",
+          "Dapper": "2.0.78",
+          "Prism.Core": "8.0.0-ci",
+          "Prism.Unity": "8.0.0-ci",
+          "Prism.Wpf": "8.0.0-ci"
+        },
+        "compile": {
+          "bin/placeholder/Client.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Client.ViewModels.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "Client.Views/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Client.Actions": "1.0.0",
+          "Client.Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Client.Views.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Client.Views.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       },
       "Prism.Core/8.0.0-ci": {
         "type": "project",
@@ -629,17 +700,19 @@
     }
   },
   "libraries": {
-    "Dapper/2.0.35": {
-      "sha512": "/xAgd8BO8EDnJ0sURWEV8LptHHvTKxoYiT63YUF2U/yWE2VyUCqR2jcrtEyNngT9Kjzppecz95UKiBla3PnR7g==",
+    "Dapper/2.0.78": {
+      "sha512": "vLPwL2HZXp/DN17Eu7sg6GMEj02alq7jcy6atn5Gv8i96b9Hu1UoxlCrhInUPfSFLQQiD8O7pdWAE1fdUEO/1Q==",
       "type": "package",
-      "path": "dapper/2.0.35",
+      "path": "dapper/2.0.78",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dapper.2.0.35.nupkg.sha512",
+        "dapper.2.0.78.nupkg.sha512",
         "dapper.nuspec",
         "lib/net461/Dapper.dll",
         "lib/net461/Dapper.xml",
+        "lib/net5.0/Dapper.dll",
+        "lib/net5.0/Dapper.xml",
         "lib/netstandard2.0/Dapper.dll",
         "lib/netstandard2.0/Dapper.xml"
       ]
@@ -1715,6 +1788,16 @@
         "unity.container.nuspec"
       ]
     },
+    "Client.Actions/1.0.0": {
+      "type": "project",
+      "path": "../Client.Actions/Client.Actions.csproj",
+      "msbuildProject": "../Client.Actions/Client.Actions.csproj"
+    },
+    "Client.ConfigurationFiles/1.0.0": {
+      "type": "project",
+      "path": "../Client.ConfigurationFiles/Client.ConfigurationFiles.csproj",
+      "msbuildProject": "../Client.ConfigurationFiles/Client.ConfigurationFiles.csproj"
+    },
     "Client.Core/1.0.0": {
       "type": "project",
       "path": "../Client.Core/Client.Core.csproj",
@@ -1740,6 +1823,16 @@
       "path": "../Client.Services/Client.Services.csproj",
       "msbuildProject": "../Client.Services/Client.Services.csproj"
     },
+    "Client.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../Client.ViewModels/Client.ViewModels.csproj",
+      "msbuildProject": "../Client.ViewModels/Client.ViewModels.csproj"
+    },
+    "Client.Views/1.0.0": {
+      "type": "project",
+      "path": "../Client.Views/Client.Views.csproj",
+      "msbuildProject": "../Client.Views/Client.Views.csproj"
+    },
     "Prism.Core/8.0.0-ci": {
       "type": "project",
       "path": "../Prism/src/Prism.Core/Prism.Core.csproj",
@@ -1762,6 +1855,8 @@
       "Client.Module >= 1.0.0",
       "Client.Resources >= 1.0.0",
       "Client.Services >= 1.0.0",
+      "Client.ViewModels >= 1.0.0",
+      "Client.Views >= 1.0.0",
       "Prism.Core >= 8.0.0-ci",
       "Prism.Unity >= 8.0.0-ci",
       "Prism.Wpf >= 8.0.0-ci"
@@ -1807,6 +1902,12 @@
             },
             "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj": {
               "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Services\\Client.Services.csproj"
+            },
+            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.ViewModels\\Client.ViewModels.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.ViewModels\\Client.ViewModels.csproj"
+            },
+            "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Views\\Client.Views.csproj": {
+              "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client.Views\\Client.Views.csproj"
             },
             "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client\\Client.Module.csproj": {
               "projectPath": "C:\\Users\\Khalil\\Source\\Repos\\QueryViewerWPF_Prism\\Client\\Client.Module.csproj"

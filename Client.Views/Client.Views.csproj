@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Client.Actions\Client.Actions.csproj" />
+    <ProjectReference Include="..\Client.Services\Client.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="D_Views\ActionTabView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="D_Views\InputColumnNameDlg.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="D_Views\MenuView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="D_Views\QueryView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="D_Views\RequetesList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="D_Views\ActionTabView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="D_Views\InputColumnNameDlg.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="D_Views\MenuView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="D_Views\QueryView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="D_Views\RequetesList.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

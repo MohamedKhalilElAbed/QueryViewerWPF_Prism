@@ -3,38 +3,4 @@
   <PropertyGroup>
     <_LastSelectedProfileId>C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Update="D_Views\ActionTabView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="D_Views\MenuView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="D_Views\QueryView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="D_Views\InputColumnNameDlg.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="D_Views\RequetesList.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="D_Views\ActionTabView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="D_Views\MenuView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="D_Views\QueryView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="D_Views\InputColumnNameDlg.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="D_Views\RequetesList.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
 </Project>

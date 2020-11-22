@@ -1,0 +1,64 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Prism/8.0.0-ci": {
+        "dependencies": {
+          "Microsoft.SourceLink.GitHub": "1.1.0-beta-20204-02",
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "Prism.dll": {}
+        }
+      },
+      "Microsoft.Build.Tasks.Git/1.1.0-beta-20204-02": {},
+      "Microsoft.SourceLink.Common/1.1.0-beta-20204-02": {},
+      "Microsoft.SourceLink.GitHub/1.1.0-beta-20204-02": {
+        "dependencies": {
+          "Microsoft.Build.Tasks.Git": "1.1.0-beta-20204-02",
+          "Microsoft.SourceLink.Common": "1.1.0-beta-20204-02"
+        }
+      },
+      "System.ValueTuple/4.5.0": {}
+    }
+  },
+  "libraries": {
+    "Prism/8.0.0-ci": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Build.Tasks.Git/1.1.0-beta-20204-02": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T7mMbmgoT3XXKrXbLeEj6D9fQLZDmF/T8W5NQsrlcfQ24nOLrkr1Cst9cmI44zIH16rIo+4ws0tEqUN+Jw5Iag==",
+      "path": "microsoft.build.tasks.git/1.1.0-beta-20204-02",
+      "hashPath": "microsoft.build.tasks.git.1.1.0-beta-20204-02.nupkg.sha512"
+    },
+    "Microsoft.SourceLink.Common/1.1.0-beta-20204-02": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3tLuYVu7iPSUGVgSygxZnN4q6ZdXFbKd2A/1Zgva5i6VMoVXoTJwggKVZTGyemlWriziOwY76I5MZI+vnJ8ztA==",
+      "path": "microsoft.sourcelink.common/1.1.0-beta-20204-02",
+      "hashPath": "microsoft.sourcelink.common.1.1.0-beta-20204-02.nupkg.sha512"
+    },
+    "Microsoft.SourceLink.GitHub/1.1.0-beta-20204-02": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nVB0LiCn+q0eprqpQ9BeZ6xMdIobiRTwZlrvyAYDv4Zprek5BUHJ8usXUEtJlCTqQYF5HvLgvwf361jCkhmXCg==",
+      "path": "microsoft.sourcelink.github/1.1.0-beta-20204-02",
+      "hashPath": "microsoft.sourcelink.github.1.1.0-beta-20204-02.nupkg.sha512"
+    },
+    "System.ValueTuple/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
+    }
+  }
+}

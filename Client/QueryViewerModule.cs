@@ -1,4 +1,5 @@
-﻿using Client.D_Views;
+﻿using Client.Core;
+using Client.D_Views;
 using Client.Module.D_Views;
 using Client.Services.Api;
 using Client.Services.Impl;
@@ -16,8 +17,10 @@ namespace Client.Module
         public static IContainerProvider ContainerProvider;
         public QueryViewerModule(IContainerProvider containerProvider)
         {
-            _regionManager = containerProvider.Resolve<IRegionManager>();
-            ContainerProvider = containerProvider;
+            Helpers.RegionManager = containerProvider.Resolve<IRegionManager>();
+            Helpers.ContainerProvider = containerProvider;
+            ContainerProvider = Helpers.ContainerProvider;
+            _regionManager = Helpers.RegionManager;
             _regionManager.RegisterViewWithRegion("MenuContentRegion", typeof(MenuView));
             _regionManager.RegisterViewWithRegion("RequeteListContentRegion", typeof(RequetesList));
             _regionManager.RegisterViewWithRegion("TabsContentRegion", typeof(ActionTabView));

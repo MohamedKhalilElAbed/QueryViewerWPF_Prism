@@ -1,0 +1,15 @@
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\bin\Release\netcoreapp3.1\Client.Services.deps.json
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\bin\Release\netcoreapp3.1\Client.Services.dll
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\bin\Release\netcoreapp3.1\Client.Services.pdb
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\bin\Release\netcoreapp3.1\Client.DataModels.dll
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\bin\Release\netcoreapp3.1\Prism.dll
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\bin\Release\netcoreapp3.1\Client.DataModels.pdb
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\bin\Release\netcoreapp3.1\Prism.pdb
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\bin\Release\netcoreapp3.1\Prism.xml
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\obj\Release\netcoreapp3.1\Client.Services.csprojAssemblyReference.cache
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\obj\Release\netcoreapp3.1\Client.Services.AssemblyInfoInputs.cache
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\obj\Release\netcoreapp3.1\Client.Services.AssemblyInfo.cs
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\obj\Release\netcoreapp3.1\Client.Services.csproj.CoreCompileInputs.cache
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\obj\Release\netcoreapp3.1\Client.Services.csproj.CopyComplete
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\obj\Release\netcoreapp3.1\Client.Services.dll
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Services\obj\Release\netcoreapp3.1\Client.Services.pdb

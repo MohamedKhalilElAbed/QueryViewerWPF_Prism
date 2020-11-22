@@ -247,6 +247,13 @@ C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\obj\Debug\n
 C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\obj\Debug\netcoreapp3.1\Client.Application.pdb
 C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\obj\Debug\netcoreapp3.1\Client.Application.genruntimeconfig.cache
 C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\bin\Debug\netcoreapp3.1\App.config
-C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\bin\Debug\netcoreapp3.1\E_Icons\refresh-icon.png
-C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\bin\Debug\netcoreapp3.1\E_Icons\x-close-icon-16.jpg
-C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\obj\Debug\netcoreapp3.1\Client.Application_Content.g.cs
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\bin\Debug\netcoreapp3.1\A_Configs\ConnectionStrings.config
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\bin\Debug\netcoreapp3.1\A_Configs\requestConfigFile.json
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\bin\Debug\netcoreapp3.1\Client.ConfigurationFiles.dll
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\bin\Debug\netcoreapp3.1\Client.ViewModels.dll
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\bin\Debug\netcoreapp3.1\Client.Views.dll
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\bin\Debug\netcoreapp3.1\Client.ViewModels.pdb
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\bin\Debug\netcoreapp3.1\Client.Views.pdb
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\bin\Debug\netcoreapp3.1\Client.ConfigurationFiles.pdb
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\bin\Debug\netcoreapp3.1\Client.Actions.dll
+C:\Users\Khalil\Source\Repos\QueryViewerWPF_Prism\Client.Application\bin\Debug\netcoreapp3.1\Client.Actions.pdb
